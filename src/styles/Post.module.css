@@ -23,15 +23,40 @@
 .post_header{
     display: flex;
     align-items: center;
-    padding-left: 1vw;
+    
+    padding: 1vw;
     border-bottom: 1px solid lightgray;
     border-radius: 2px;
     
     
 }
+.hrtIcon{
+    position: absolute;
+    right: 52%;
+    width:1.7%;
+    height: auto;
+}
 
+.hrtIcon:hover{
+    cursor: pointer;
+}
 .post_header_img{
     
     margin-right: 10px;
 
+}
+
+
+.post{
+    position: absolute;
+    top:3px;
+    right: 2vw;
+    opacity :0.5;
+}
+
+.post:hover{
+    cursor: pointer;
+    font-size: bold;
+    opacity: 1;
+    color:rgb(19, 125, 163);
 }

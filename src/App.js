@@ -10,10 +10,10 @@ function App() {
       posturl: userImg,
       postCaption: "#carying",
       avatarUrl: userImg,
-       userName: "username"
+      userName: "username"
     },
     {
-      posturl: userImg, 
+      posturl: userImg,
       postCaption: "#carying",
       avatarUrl: userImg,
       userName: "username"
@@ -34,11 +34,13 @@ function App() {
     <div className="app">
       <Header />
       {
-        post.map((val) => {
-          return <>
-            <Post userimg={val.posturl} avatarimg={val.avatarUrl} caption={val.postCaption} username={val.userName} />
-          </>
-
+        post.map((val, i) => {
+          return <Post key={i}
+            userimg={val.posturl}
+            avatarimg={val.avatarUrl}
+            caption={val.postCaption}
+            username={val.userName}
+          />
         })
       }
 

@@ -5,3 +5,13 @@
     border-bottom: 1px solid lightgrey;
     background-color:white;
 }
+.logo{
+    padding-left: 4vw;
+}
+.input{
+   position: absolute;
+   left:35vw;
+   height: 4vh;
+   border: 1px solid lightgray;
+   padding-left: 9%;
+}

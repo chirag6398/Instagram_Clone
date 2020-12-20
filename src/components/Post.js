@@ -8,7 +8,7 @@ export default function Post(props) {
         <div className={postStyle.post_container} >
             <div className={postStyle.post_header}>
                 <Avatar className={postStyle.post_header_img} alt="Cindy Baker" src={props.avatarimg} />
-                <h3>username</h3>
+                <h3>{props.username}</h3>
             </div>
 
 

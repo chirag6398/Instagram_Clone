@@ -1,24 +1,49 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import './App.css';
 import Header from "./components/header";
 import Post from "./components/Post";
 import userImg from "./images/demoUserImg.jpg";
 
 function App() {
-  const [post,setPost]=useState([
-    {},
-  {},
-  {},
-  {}])
+  const [post, setPost] = useState([
+    {
+      posturl: userImg,
+      postCaption: "#carying",
+      avatarUrl: userImg,
+       userName: "username"
+    },
+    {
+      posturl: userImg, 
+      postCaption: "#carying",
+      avatarUrl: userImg,
+      userName: "username"
+    },
+    {
+      posturl: userImg,
+      postCaption: "#carying",
+      avatarUrl: userImg,
+      userName: "username"
+    },
+    {
+      posturl: userImg,
+      postCaption: "#carying",
+      avatarUrl: userImg,
+      userName: "username"
+    }])
   return (
     <div className="app">
-    <Header/>
-    <Post userimg={userImg} avatarimg={userImg} caption="its good"/>
-    <Post userimg={userImg} avatarimg={userImg} caption="its good"/>
-    <Post userimg={userImg} avatarimg={userImg} caption="its good"/>
-    <Post userimg={userImg} avatarimg={userImg} caption="its good"/>
+      <Header />
+      {
+        post.map((val) => {
+          return <>
+            <Post userimg={val.posturl} avatarimg={val.avatarUrl} caption={val.postCaption} username={val.userName} />
+          </>
+
+        })
+      }
+
      hello baby
-     
+
     </div>
   );
 }

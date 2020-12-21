@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import './App.css';
-import Header from "./components/header";
-import Post from "./components/Post";
+import Home from "./components/Home/Home";
+import { BrowserRouter, Route } from "react-router-dom";
+
 import userImg from "./images/demoUserImg.jpg";
 
 function App() {
@@ -30,23 +31,12 @@ function App() {
       avatarUrl: userImg,
       userName: "username"
     }])
-  return (
+  return (<BrowserRouter>
     <div className="app">
-      <Header />
-      {
-        post.map((val, i) => {
-          return <Post key={i}
-            userimg={val.posturl}
-            avatarimg={val.avatarUrl}
-            caption={val.postCaption}
-            username={val.userName}
-          />
-        })
-      }
-
-     hello baby
-
+    <Route path="/"> <Home post={post} /></Route>
+     
     </div>
+  </BrowserRouter>
   );
 }
 

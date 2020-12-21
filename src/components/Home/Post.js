@@ -1,8 +1,8 @@
 import React,{useState} from 'react';
-import postStyle from "../styles/Post.module.css";
+import postStyle from "../../styles/Post.module.css";
 import Avatar from "@material-ui/core/Avatar";
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import heartIcon from "../images/hearticon.png";
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import heartIcon from "../../images/hearticon.png";
 
 export default function Post(props) {
    const [comments,setComments]=useState({comment:""});

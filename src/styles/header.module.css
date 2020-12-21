@@ -7,25 +7,29 @@
     display: flex;
     align-items: center;
 }
-.logo{
+.active{
     padding: 4vw;
+    position: absolute;
+    left: 9%;
     object-fit: contain;
 }
 .input{
    position: absolute;
    left:35vw;
+   width: 18%;
    height: 4%;
    border: 1px solid lightgray;
    border-radius: 2px ;
-   padding-left: 9%;
+   padding-left: 7%;
 }
 .hIcon{
     position: absolute;
     right: 30%;
-    top:3px;
+    margin-bottom: 4vh;
     width:27px;
     height: auto;
-    margin: 1%;
+    object-fit: contain;
+   
 }
 
 .hIcon:hover{
@@ -34,10 +38,11 @@
 .hrtIcon{
     position: absolute;
     right: 18%;
-    top:3px;
+    
     width:27px;
     height: auto;
-    margin: 1%;
+    object-fit: contain;
+   
 }
 
 .hrtIcon:hover{
@@ -46,10 +51,11 @@
 .arrIcon{
     position: absolute;
     right: 26%;
-    top:3px;
+    
     width:27px;
+    object-fit: contain;
     height: auto;
-    margin: 1%;
+   
 }
 
 .arrIcon:hover{
@@ -58,10 +64,11 @@
 .userimg{
     position: absolute;
     right: 14%;
-    top:3px;
+    
     width:27px;
+    object-fit: contain;
     height: auto;
-    margin: 1%;
+   
     border-radius: 50px;
 }
 .userimg:hover{
@@ -69,14 +76,69 @@
 }
 .cpsIcon{
     position: absolute;
-    top:3px;
+    
     right: 22%;
     width:27px;
     height: auto;
-    margin: 1%;
+    object-fit: contain;
+   
 }
 
 .cpsIcon:hover{
     cursor: pointer;
     
 }
+@media all and (max-width: 824px)  {
+    .ext_div{
+        padding: 2%;
+        width:100%;
+        height: 10%;
+        border-bottom: 1px solid lightgrey;
+        background-color:white;
+        display: flex;
+        align-items: center;
+    }
+    .input{
+        position: absolute;
+       top:-100%;
+     }
+
+     .hIcon{
+     position: absolute;
+    right: 36%;
+   
+    width: 32px;
+    height: auto;
+    object-fit: contain;
+   
+}
+.arrIcon{
+    position: absolute;
+    right: 29%;
+    width: 31px;
+    object-fit: contain;
+    height: auto;
+}
+.cpsIcon{
+    position: absolute;
+    right: 22%;
+    width: 31px;
+    height: auto;
+    object-fit: contain;
+}
+.hrtIcon{
+    position: absolute;
+    right: 15%;
+    width: 30px;
+    height: auto;
+    object-fit: contain;
+}
+.userimg{
+    position: absolute;
+    right: 8%;
+    width: 31px;
+    object-fit: contain;
+    height: auto;
+    border-radius: 50px;
+}
+  }

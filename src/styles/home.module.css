@@ -1,0 +1,51 @@
+.storySection{
+    margin-top: 4vh;
+    margin-bottom: 6vh;
+    max-width: 500px; 
+    height: 10vh;
+   
+    background-color: white;
+    margin-left: 13vw;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    overflow: auto;
+   
+}
+.userimg{
+
+    width: 10%;
+    object-fit: contain;
+    height: auto;
+    border: 2px solid rgb(243, 43, 43);
+    margin-top: 1vh;
+    margin-left: 10px;
+    
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+@media all and (max-width: 824px)  {
+    .storySection{
+        margin-top: 4vh;
+        margin-bottom: 6vh;
+        max-width: 500px; 
+        height: 14vh;
+        background-color: white;
+        margin-left: 13vw;
+        border: 1px solid lightgray;
+        border-radius: 2px;
+       
+    }
+    
+.userimg{
+
+    width: 10%;
+    object-fit: contain;
+    height: auto;
+    border: 2px solid rgb(243, 43, 43);
+    margin-top: 1.8vh;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+}

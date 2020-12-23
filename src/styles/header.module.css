@@ -50,8 +50,8 @@
 }
 .arrIcon{
     position: absolute;
-    right: 26%;
-    
+    right: 27%;
+    top: 19px;
     width:27px;
     object-fit: contain;
     height: auto;

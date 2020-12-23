@@ -12,12 +12,13 @@ export default function Post(props) {
     }
     const commentPostHandler=()=>{
         setPostedComment({postedComment:comments.comment})
+        setComments({comment:""})
     }
     return (
         <div className={postStyle.post_container} >
 
             <div className={postStyle.post_header}>
-                <Avatar className={postStyle.post_header_img} alt="Cindy Baker" src={props.avatarimg} />
+                <Avatar className={postStyle.post_header_img} alt="..." src={props.avatarimg} />
                 <h3>{props.username}</h3>
             </div>
 

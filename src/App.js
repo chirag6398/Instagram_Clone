@@ -36,7 +36,7 @@ function App() {
     <div className="app">
     <Header />
     <Route exact path="/"> <Home post={post} /></Route>
-    <Route exact path="/comment"><Comment userName={post[0].userName}/></Route>
+    <Route exact path="/comment"><Comment data={post}/></Route>
      
     </div>
   </BrowserRouter>

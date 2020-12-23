@@ -1,10 +1,12 @@
 import React from 'react';
+import Header from "../header"
 import commentStyle from "../../styles/Comment.module.css";
 import arrImg from "../../images/arrcommentimg.png";
 import userimg from "../../images/demoUserImg.jpg";
 
 export default function Comment(props) {
-    return (
+    return (<>
+    <Header />
         <div className={commentStyle.ext_div}>
             <div className={commentStyle.center_div}>
                 <div className={commentStyle.leftside_portion}>
@@ -20,13 +22,6 @@ export default function Comment(props) {
                                 </>)
                             })
                         }
-                        <img className={commentStyle.userimg} alt="..." src={userimg}></img>
-                        <span className={commentStyle.username}> #username</span>
-                        <img className={commentStyle.userimg} alt="..." src={userimg}></img>
-                        <span className={commentStyle.username}> #username</span>
-                        <img className={commentStyle.userimg} alt="..." src={userimg}></img>
-                        <span className={commentStyle.username}> #username</span>
-
                     </div>
                 </div>
                 <div className={commentStyle.rightside_portion}>
@@ -37,5 +32,6 @@ export default function Comment(props) {
             </div>
 
         </div>
+        </>
     )
 }

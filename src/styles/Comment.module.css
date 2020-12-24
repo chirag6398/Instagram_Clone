@@ -18,7 +18,7 @@
     width:38%;
     height: 100%;
     border-right: 1px solid lightgray;
-    overflow: auto;
+    overflow-y: auto;
  
 }
 .user_detail{
@@ -42,17 +42,20 @@
 .userimg{
     display: block;
     position: relative;
-    left: 2vw;
+    left: 1.8vw;
     margin-top: 1vh;
     width: 45px;
     object-fit: contain;
     height: auto;
     border-radius: 50px;
+    cursor: pointer;
 }
+
 .username{
     position: relative;
     top: -7vh;
-    left: 25%;
+    left: 28%;
+    cursor: pointer;
 }
 
 
@@ -62,6 +65,69 @@
     left: 42.87vw;
     height: 72vh;
     width: 37vw;
+}
+.chatHeader{
+    position: absolute;
+    top: 1vh;
+    
+    height: 62px;
+    z-index: 10;
+    background: rgb(255, 253, 253);
+    width: 37vw;
+    border-bottom: 1px solid lightgray;
+}
+.chatUserImg{
+    position: relative;
+    left: 1.8vw;
+    margin-top: 1vh;
+    width: 40px;
+    object-fit: contain;
+    height: auto;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.chatUserName{
+    font-weight: 600;
+    position: relative;
+    left: 6vw;
+    font-size: larger;
+    top: -5vh;
+
+}
+.messagePart{
+    position: relative;
+    top:30vh;
+}
+.chatInput{
+    position: absolute;
+    top: 60vh;
+    border: 1px solid lightgray;
+    left: 1vw;
+    width: 34vw;
+    border-radius: 55px;
+    height: 7vh;
+    padding: 24px;
+}
+.sendButton{
+    position: absolute;
+    top: 62vh;
+    left: 29vw;
+    border: 0px;
+    opacity: .5;
+}
+.messagePart{
+    position: absolute;
+    top: 10vh;
+    overflow-y: scroll;
+    left: 21vw;
+    width: 16vw;
+    height: 50vh;
+    
+}
+.message{
+    
+    float:right;
+    
 }
 .arrimg{
     position: absolute;
@@ -79,7 +145,7 @@
 }
 .text2{
     margin: 1vh;
-    margin-left: 2vw;
+    margin-left: 3vw;
     position: absolute;
     top: 50vh;
     text-align: center;
@@ -101,7 +167,87 @@
         height: 62px;
         z-index: 10;
         background: rgb(255, 253, 253);
-        width: 36vw;
+        width: 35vw;
         border-bottom: 1px solid lightgray;
+
+       
+    }
+    .username{
+        position: relative;
+        top: -7vh;
+        left: 36%;
+        cursor: pointer;
+    }
+    .rightside {
+        position: absolute;
+        display: flex;
+        top: 0vh;
+        left: 37.87vw;
+        height: 80vh;
+        width: 62vw;
+        justify-content: center;
+        align-items: center;
+
+       
+    }
+    .arrimg {
+        width: 10vw;
+        object-fit: contain;
+        border-radius: 500px;
+    }
+    .text {
+        position: absolute;
+        font-size: 4vh;
+        top: 38vh;
+        left: 9vw;
+    }
+    .text2{
+        position: absolute;
+        top: 46vh;
+        text-align: center;
+    }
+    .chatUserName{
+        font-weight: 600;
+        position: relative;
+        left: 10vw;
+        font-size: larger;
+        top: -4vh;
+    
+    }
+    .chatHeader{
+    position: absolute;
+    top: -3vh;
+    left: -5vw;
+    height: 62px;
+    z-index: 10;
+    background: rgb(255, 253, 253);
+    width: 61vw;
+    border-bottom: 1px solid lightgray;
+    }
+    .chatInput{
+        position: absolute;
+        top: 65vh;
+        border: 1px solid lightgray;
+        left: 1vw;
+        width: 56vw;
+        border-radius: 55px;
+        height: 7vh;
+        padding: 24px;
+    }
+    .sendButton{
+        position: absolute;
+        top: 67vh;
+        left: 49vw;
+        border: 0px;
+        opacity: .5;
+    }
+    .messagePart{
+        position: absolute;
+        top: 10vh;
+        overflow-y: scroll;
+        left: 24vw;
+        width: 36vw;
+        height: 55vh;
+        
     }
 }

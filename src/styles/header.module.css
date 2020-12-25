@@ -1,32 +1,41 @@
 .ext_div{
     padding: 2%;
-    width:100%;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
     height: 10%;
     border-bottom: 1px solid lightgrey;
-    background-color:white;
+    background-color: white;
     display: flex;
     align-items: center;
 }
 .active{
-    padding: 4vw;
-    position: absolute;
-    left: 9%;
     object-fit: contain;
+    margin-left: 5vw;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    width: 20vw;
+    position: absolute;
+    right: 6vw;
+    align-items: center;
+     
 }
 .input{
    position: absolute;
    left:35vw;
    width: 18%;
-   height: 4%;
+   height: 37%;
    border: 1px solid lightgray;
    border-radius: 2px ;
    padding-left: 7%;
 }
 .hIcon{
-    position: absolute;
-    right: 30%;
-    margin-bottom: 4vh;
+    
     width:27px;
+    margin-right: 6px;
     height: auto;
     object-fit: contain;
    
@@ -36,9 +45,8 @@
     cursor: pointer;
 }
 .hrtIcon{
-    position: absolute;
-    right: 18%;
-    
+  
+    margin-right: 6px;
     width:27px;
     height: auto;
     object-fit: contain;
@@ -49,9 +57,8 @@
     cursor: pointer;
 }
 .arrIcon{
-    position: absolute;
-    right: 27%;
-    top: 2.5vh;
+   
+    margin-right: 6px;
     width:27px;
     object-fit: contain;
     height: auto;
@@ -61,23 +68,14 @@
 .arrIcon:hover{
     cursor: pointer;
 }
-.userimg{
-    position: absolute;
-    right: 14%;
-    
-    width:27px;
-    object-fit: contain;
-    height: auto;
-   
-    border-radius: 50px;
-}
+
 .userimg:hover{
     cursor: pointer;
 }
 .cpsIcon{
-    position: absolute;
-    
-    right: 22%;
+   
+    margin-right: 6px;
+   
     width:27px;
     height: auto;
     object-fit: contain;
@@ -104,42 +102,33 @@
      }
 
      .hIcon{
-     position: absolute;
-    right: 36%;
-   
+     
+    margin-right: 6px;
     width: 32px;
     height: auto;
     object-fit: contain;
    
 }
 .arrIcon{
-    position: absolute;
-    top:0vh;
-    right: 29%;
+
     width: 31px;
     object-fit: contain;
     height: auto;
+    margin-right: 6px;
 }
 .cpsIcon{
-    position: absolute;
-    right: 22%;
+   
     width: 31px;
+    margin-right: 6px;
     height: auto;
     object-fit: contain;
 }
 .hrtIcon{
-    position: absolute;
-    right: 15%;
+  
     width: 30px;
+    margin-right: 6px;
     height: auto;
     object-fit: contain;
 }
-.userimg{
-    position: absolute;
-    right: 8%;
-    width: 31px;
-    object-fit: contain;
-    height: auto;
-    border-radius: 50px;
-}
+
   }

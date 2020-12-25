@@ -38,6 +38,7 @@
 }
 .userNames{
     height: 10vh;
+    margin-top: 13vh;
 }
 .userimg{
     display: block;

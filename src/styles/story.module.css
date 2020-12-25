@@ -1,4 +1,4 @@
-.userimg{
+/* .userimg{
     width: 4%;
     position: absolute;
     top: 8vh;
@@ -10,6 +10,15 @@
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 50px;
+} */
+.userImgandName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 4vh;
+    color: white;
+    left: 36vw;
 }
 .ext_div{
     display: flex;
@@ -34,13 +43,13 @@
     border-radius: 5px;
     
 }
-.username{
+/* .username{
     position: absolute;
     color: antiquewhite;
     top: 12vh;
     left: 40vw;
 
-}
+} */
 .logo{
     width: 4vw;
     position: absolute;

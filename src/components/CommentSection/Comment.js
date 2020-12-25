@@ -3,6 +3,7 @@ import Header from "../header";
 import commentStyle from "../../styles/Comment.module.css";
 import arrImg from "../../images/arrcommentimg.png";
 import userimg from "../../images/demoUserImg.jpg";
+import Avatar from "@material-ui/core/Avatar";
 
 export default function Comment(props) {
     const [chatperson, setChatperson] = useState();
@@ -44,7 +45,7 @@ export default function Comment(props) {
                                 return (<div key={i} onClick={(e) => {
                                     chatHandler(e, val)
                                 }}>
-                                    <img className={commentStyle.userimg} alt="..." src={userimg}></img>
+                                    <Avatar  alt="..." src={userimg} />
                                     <span className={commentStyle.username}>{val.userName}</span>
                                 </div>)
                             })

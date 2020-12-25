@@ -17,9 +17,9 @@
 .links{
     display: flex;
     justify-content: center;
-    width: 41vw;
+    width: 50vw;
     position: absolute;
-    right: 15vw;
+    right: 7vw;
     align-items: center;
      
 }

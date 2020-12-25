@@ -12,7 +12,8 @@ export default function Comment(props) {
 
     const chatDataHandler = (e) => {
 
-        setChatData([e.target.value])
+        setChatData([e.target.value]);
+        setMessage([]);
 
     }
 

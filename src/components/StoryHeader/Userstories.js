@@ -14,7 +14,7 @@ export default function Userstories(props) {
             <div className={storyStyle.center_div}>
             <img src={avatarimg} className={storyStyle.userimg}></img>
             <h5 className={storyStyle.username}>rdyhs{props.data.userName}</h5>
-            <video className={storyStyle.video} src="D:\instagram_clone\instagram-clone\src\videoes\HP5.mkv" controls autoPlay></video>
+            <video className={storyStyle.video} src="../../videos/HP5.mkv" controls autoPlay></video>
             <input type="text" className={storyStyle.replyField} placeholder="  Reply to ..."></input>
             </div>
            

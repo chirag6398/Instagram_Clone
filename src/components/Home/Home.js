@@ -49,6 +49,8 @@ export default function Home(props) {
             <span className="sr-only">Next</span>
           </a>
         </div>
+
+        
       </div>
       {
         props.post.map((val, i) => {

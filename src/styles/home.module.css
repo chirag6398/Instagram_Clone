@@ -25,17 +25,20 @@
     border-radius: 50px;
 }
 
-@media all and (max-width: 824px)  {
+@media all and (max-width: 595px)  {
     .storySection{
-        margin-top: 4vh;
-        margin-bottom: 6vh;
-        max-width: 500px; 
+        margin-top: 0px;
+    margin-bottom: 0px;
+        
+        max-width: 100%;
         height: 14vh;
         background-color: white;
-        margin-left: 13vw;
+        margin-left: 0px; 
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
         border: 1px solid lightgray;
         border-radius: 2px;
-       
     }
     
 .userimg{

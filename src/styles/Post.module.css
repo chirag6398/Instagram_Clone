@@ -60,3 +60,18 @@
     opacity: 1;
     color:rgb(19, 125, 163);
 }
+
+@media all and (max-width: 595px)  {
+    .post_container{
+        margin-top: 0vh;
+        margin-bottom: 0vh;
+        margin-left: 0px;
+        max-width: 100%;
+        height: auto;
+        background-color: white;
+        border: 1px solid lightgray;
+        border-radius: 2px;
+    
+    }
+
+}

@@ -51,7 +51,7 @@
 .arrIcon{
     position: absolute;
     right: 27%;
-    top: 19px;
+    top: 2.5vh;
     width:27px;
     object-fit: contain;
     height: auto;
@@ -114,6 +114,7 @@
 }
 .arrIcon{
     position: absolute;
+    top:0vh;
     right: 29%;
     width: 31px;
     object-fit: contain;

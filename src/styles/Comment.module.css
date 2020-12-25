@@ -125,8 +125,12 @@
     
 }
 .message{
-    
-    float:right;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    position: absolute;
+    left: 3vw;
+    clear: both;
     
 }
 .arrimg{

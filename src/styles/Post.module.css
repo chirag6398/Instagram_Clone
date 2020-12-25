@@ -18,7 +18,7 @@
 }
 .post_caption{
     font-weight: normal;
-    padding-left: 1vw;
+    
 }
 .post_header{
     display: flex;
@@ -45,7 +45,54 @@
     margin-right: 10px;
 
 }
+.postIcons{
+    display: flex;
+   
+    width: 20vw;
+    
+     padding-top: 10px;
+}
+.cmntIcon{
+    
+    width:27px;
+    margin-right: 6px;
+    height: auto;
+    object-fit: contain;
+   
+}
 
+.cmntIcon:hover{
+    cursor: pointer;
+}
+.hrtPIcon{
+  
+    margin-right: 6px;
+    width:27px;
+    height: auto;
+    object-fit: contain;
+   
+}
+
+.hrtPIcon:hover{
+    cursor: pointer;
+}
+.arrIcon{
+   
+    margin-right: 6px;
+    width:27px;
+    object-fit: contain;
+    height: auto;
+   
+}
+
+.arrIcon:hover{
+    cursor: pointer;
+}
+
+.belowPost{
+    padding-left: 7px;
+    font-family: serif;
+}
 
 .post{
     position: absolute;
@@ -73,5 +120,12 @@
         border-radius: 2px;
     
     }
+    .hrtIcon{
+        position: absolute;
+        right: 9%;
+        width: 5.7%;
+        height: auto;
+    }
+    
 
 }

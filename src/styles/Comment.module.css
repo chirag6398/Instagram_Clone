@@ -41,6 +41,7 @@
     height: 10vh;
     margin-top: 13vh;
     margin-left: 1vw;
+    font-family: cursive;
 }
 .userimg{
     display: block;
@@ -174,7 +175,7 @@
     .username{
         position: relative;
         top: -7vh;
-        left: 36%;
+        left: 53%;
         cursor: pointer;
     }
     .userNames{

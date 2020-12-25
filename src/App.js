@@ -18,37 +18,37 @@ function App() {
       posturl: userImg,
       postCaption: "#carying",
       avatarUrl: userImg,
-      userName: "username1"
+      userName: "anas@cool"
     },
     {
       posturl: userImg,
       postCaption: "#carying",
       avatarUrl: userImg,
-      userName: "username2"
+      userName: "shivam@looking..."
     },
     {
       posturl: userImg,
       postCaption: "#carying",
       avatarUrl: userImg,
-      userName: "username3"
+      userName: "garima@kuposhadkishikaar"
     },
     {
       posturl: userImg,
       postCaption: "#carying",
       avatarUrl: userImg,
-      userName: "username4"
+      userName: "sparsh@exitedforbha.."
     },
     {
       posturl: userImg,
       postCaption: "#carying",
       avatarUrl: userImg,
-      userName: "username5"
+      userName: "arpit@gyanibaba"
     },
     {
       posturl: userImg,
       postCaption: "#carying",
       avatarUrl: userImg,
-      userName: "username6"
+      userName: "sudheer@intelligent"
     },
     {
       posturl: userImg,

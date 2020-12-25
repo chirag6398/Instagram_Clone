@@ -23,6 +23,7 @@
 .post_header{
     display: flex;
     align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     
     padding: 1vw;
     border-bottom: 1px solid lightgray;

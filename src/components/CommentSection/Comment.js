@@ -14,7 +14,7 @@ export default function Comment(props) {
     const chatDataHandler = (e) => {
 
         setChatData([e.target.value]);
-        setMessage([]);
+       
 
     }
 
@@ -29,7 +29,8 @@ export default function Comment(props) {
         setChatperson({
             userName: val.userName
         });
-        console.log(chatperson);
+        setMessage([]);
+       
     }
     return (<>
         <Header />
@@ -57,14 +58,14 @@ export default function Comment(props) {
                 <div className={commentStyle.rightside_portion}>
                     {
 
-                        (!chatperson) ? <div>
+                        (!chatperson) ? <div className={commentStyle.initialchatView}>
                             <img src={arrImg} alt="..." className={commentStyle.arrimg} />
                             <p className={commentStyle.text}>Your Messages</p>
                             <p className={commentStyle.text2}>Send private photos and messages to a friend or group.</p>
                         </div>
-                            : <div>
+                            : <div >
                                 <div className={commentStyle.chatHeader}>
-                                    <img className={commentStyle.chatUserImg} alt="..." src={userimg}></img>
+                                <Avatar  alt="..." src={userimg} />                                   
                                     <p className={commentStyle.chatUserName}> {chatperson.userName}</p>
                                     <div className={commentStyle.messagePart}>
                                         {

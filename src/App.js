@@ -67,7 +67,13 @@ function App() {
       postCaption: "#carying",
       avatarUrl: userImg,
       userName: "username9"
-    }])
+    }]);
+
+    var isTrue=false;
+    if(isTrue){
+      setPost([]);
+    }
+
   return (<BrowserRouter>
     <div className="app">
     

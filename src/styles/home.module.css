@@ -1,5 +1,5 @@
 .container{
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 .storySection{
     margin-top: 14vh;
@@ -19,27 +19,14 @@
 .userStoryImg{
     margin: 1vw 1vw;
 }
-.userimg{
-  display: flex;
-  flex-direction: row;
-    /* width: 10%; */
-    object-fit: contain;
-    /* height: auto; */
-    border: 2px solid rgb(243, 43, 43);
-    /* margin-top: 1vh;
-    margin-left: 10px; */
-    
-    /* margin-right: 10px;
-    border-radius: 50px; */
-}
+
 
 @media all and (max-width: 595px)  {
-    .storySection{
-        margin-top: 7%;
-    margin-bottom: 0px;
-        
-        max-width: 100%;
-        height: 20vh;
+    .storySection{    
+        margin-top: 11%;
+        margin-bottom: 0px;
+         max-width: 100%;
+         height: 12vh;
         background-color: white;
         margin-left: 0px; 
         display: flex;

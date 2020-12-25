@@ -19,6 +19,7 @@
     height: 100%;
     border-right: 1px solid lightgray;
     overflow-y: auto;
+  
  
 }
 .user_detail{
@@ -39,6 +40,7 @@
 .userNames{
     height: 10vh;
     margin-top: 13vh;
+    margin-left: 1vw;
 }
 .userimg{
     display: block;
@@ -70,7 +72,8 @@
 .chatHeader{
     position: absolute;
     top: 1vh;
-    
+    padding-left: 1vw;
+    padding-top: 1vh;
     height: 62px;
     z-index: 10;
     background: rgb(255, 253, 253);
@@ -90,7 +93,7 @@
 .chatUserName{
     font-weight: 600;
     position: relative;
-    left: 6vw;
+    left: 4vw;
     font-size: larger;
     top: -5vh;
 
@@ -123,38 +126,29 @@
     left: 21vw;
     width: 16vw;
     height: 50vh;
-    
-}
-.message{
     display: flex;
     flex-direction: column;
     align-self: flex-end;
-    position: absolute;
-    left: 3vw;
-    clear: both;
-    
 }
-.arrimg{
-    position: absolute;
-    top: 23vh;
-    left: 13vw;
-    width: 10vw;
-    object-fit: contain;
-    border-radius: 500px;
-}
-.text{
-    position: absolute;
-    font-size: 4vh;
-    top: 43vh;
-    left: 12vw;
-}
-.text2{
-    margin: 1vh;
-    margin-left: 3vw;
-    position: absolute;
-    top: 50vh;
+.initialchatView{
+    margin-top: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
 }
+
+.arrimg{
+    width: 10vw;
+    object-fit: contain;
+}
+.text{
+    
+    font-size: 4vh;
+   
+}
+
 
 @media all and (max-width: 936px)  {
     .center_div{
@@ -174,7 +168,7 @@
         background: rgb(255, 253, 253);
         width: 35vw;
         border-bottom: 1px solid lightgray;
-
+        margin-top: 1vh;
        
     }
     .username{
@@ -183,51 +177,50 @@
         left: 36%;
         cursor: pointer;
     }
+    .userNames{
+        height: 10vh;
+        margin-top: 13vh;
+        margin-left: 1vw;
+        width: 15vw;
+    }
     .rightside {
         position: absolute;
-        display: flex;
-        top: 0vh;
-        left: 37.87vw;
-        height: 80vh;
-        width: 62vw;
-        justify-content: center;
-        align-items: center;
+    top: 1vh;
+    left: 38vw;
+    height: 79vh;
+    width: 60vw;
 
        
     }
-    .arrimg {
-        width: 10vw;
-        object-fit: contain;
-        border-radius: 500px;
-    }
-    .text {
+
+   
+    .rightside_portion{
         position: absolute;
-        font-size: 4vh;
-        top: 38vh;
-        left: 9vw;
-    }
-    .text2{
-        position: absolute;
-        top: 46vh;
-        text-align: center;
+        top: 1vh;
+        left: 37.87vw;
+        display: flex;
+        height: 79vh;
+        width: 62vw;
+        align-items: center;
+        justify-content: center;
     }
     .chatUserName{
         font-weight: 600;
-        position: relative;
-        left: 10vw;
+        position: absolute;
+        left: 6vw;
         font-size: larger;
-        top: -4vh;
+        top: 3vh;
     
     }
     .chatHeader{
-    position: absolute;
-    top: -3vh;
+        position: absolute;
+        top: -2vh;
     left: -5vw;
-    height: 62px;
-    z-index: 10;
-    background: rgb(255, 253, 253);
-    width: 61vw;
-    border-bottom: 1px solid lightgray;
+        height: 62px;
+        z-index: 10;
+        background: rgb(255, 253, 253);
+        width: 60vw;
+        border-bottom: 1px solid lightgray;
     }
     .chatInput{
         position: absolute;
@@ -253,6 +246,8 @@
         left: 24vw;
         width: 36vw;
         height: 55vh;
-        
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
     }
 }

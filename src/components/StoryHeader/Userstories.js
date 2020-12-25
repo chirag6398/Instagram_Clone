@@ -9,8 +9,8 @@ import Avatar from "@material-ui/core/Avatar";
 export default function Userstories(props) {
     return (
         <div className={storyStyle.ext_div}>
-            <NavLink to="/"> <img className={storyStyle.logo} src={logo}></img></NavLink>
-            <NavLink to="/"> <img className={storyStyle.mSymbol} src={multyplysymbol}></img></NavLink>
+            <NavLink to="/"> <img className={storyStyle.logo} alt="..." src={logo}></img></NavLink>
+            <NavLink to="/"> <img className={storyStyle.mSymbol} alt=".." src={multyplysymbol}></img></NavLink>
 
             <div className={storyStyle.center_div}>
                 <div className={storyStyle.userImgandName}> <Avatar alt="..." src={avatarimg} />

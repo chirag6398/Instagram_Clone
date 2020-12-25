@@ -1,16 +1,4 @@
-/* .userimg{
-    width: 4%;
-    position: absolute;
-    top: 8vh;
-    left: 35vw;
-    object-fit: contain;
-    height: auto;
-    border: 2px solid rgb(243, 43, 43);
-    margin-top: 1vh;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 50px;
-} */
+
 .userImgandName{
     display: flex;
     justify-content: center;
@@ -43,13 +31,7 @@
     border-radius: 5px;
     
 }
-/* .username{
-    position: absolute;
-    color: antiquewhite;
-    top: 12vh;
-    left: 40vw;
 
-} */
 .logo{
     width: 4vw;
     position: absolute;

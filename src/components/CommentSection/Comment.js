@@ -24,7 +24,7 @@ export default function Comment(props) {
 
 
     const chatHandler = (e, val) => {
-        console.log(val.userName);
+       
 
         setChatperson({
             userName: val.userName

@@ -1,9 +1,8 @@
 import React from 'react';
 import Post from "./Post";
 import homeStyle from "../../styles/home.module.css";
-
 import { NavLink } from "react-router-dom";
-import Header from "../header";import Avatar from "@material-ui/core/Avatar";
+import Header from "../header";
 import storyimg from "../../images/storyimg.jpg"
 
 export default function Home(props) {

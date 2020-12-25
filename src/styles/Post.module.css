@@ -48,10 +48,11 @@
 }
 .postIcons{
     display: flex;
-   
+    align-items: center;
     width: 20vw;
-    
-     padding-top: 10px;
+    padding-top: 10px;
+   
+    height: 7vh;
 }
 .cmntIcon{
     
@@ -93,6 +94,9 @@
 .belowPost{
     padding-left: 7px;
     font-family: serif;
+    
+    width: 100%;
+    height: auto;
 }
 
 .post{

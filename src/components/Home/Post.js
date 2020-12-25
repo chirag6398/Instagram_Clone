@@ -35,8 +35,10 @@ export default function Post(props) {
         <div className={postStyle.post_container} >
 
             <div className={postStyle.post_header}>
+            
                 <Avatar className={postStyle.post_header_img} alt="..." src={props.avatarimg} />
                 <h3 style={{fontSize:"larger"}}>{props.username}</h3>
+                <span style={{cursor:"pointer",opacity:"0.7",fontWeight:"bolder",position:"relative",right:"2vw"}}>...</span>
             </div>
 
 
@@ -48,7 +50,7 @@ export default function Post(props) {
                     <img className={postStyle.cmntIcon} src={commentIcon} alt="" onClick={directedToComment} />
                     <img className={postStyle.arrIcon} src={arrIcon} alt="" />
                 </div>
-                <p>Liked by kushagra8198 and 90 others</p>
+                <p>Liked by<b> kushagra8198</b> and <b>90 others</b></p>
                 <p className={postStyle.post_caption}><strong>@username</strong>   caption #crazy#innovative {props.caption}</p>
                 <p style={{ opacity: ".5" }}>19 HOURS AGO</p>
             </div>

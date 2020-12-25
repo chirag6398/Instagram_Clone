@@ -36,6 +36,9 @@
 .userName{
     font-weight: 600;
     text-align: center;
+    font-size: 2vh;
+    font-family: emoji;
+    overflow: hidden;
 }
 .userNames{
     height: 10vh;
@@ -175,12 +178,13 @@
     .username{
         position: relative;
         top: -7vh;
-        left: 53%;
+        left: 69%;
+        font-size: 3vh;
         cursor: pointer;
     }
     .userNames{
         height: 10vh;
-        margin-top: 13vh;
+        margin-top: 15vh;
         margin-left: 1vw;
         width: 15vw;
     }
@@ -215,8 +219,8 @@
     }
     .chatHeader{
         position: absolute;
-        top: -2vh;
-    left: -5vw;
+        top: 0vh;
+    left: 0vw;
         height: 62px;
         z-index: 10;
         background: rgb(255, 253, 253);

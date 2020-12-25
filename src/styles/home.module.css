@@ -5,7 +5,7 @@
     margin-top: 14vh;
     margin-bottom: 6vh;
     max-width: 500px; 
-    height: 13vh;
+    height: 14vh;
     display: flex;
     background-color: white;
     margin-left: 13vw;
@@ -19,11 +19,18 @@
 .userStoryImg{
     margin: 1vw 1vw;
 }
-
+.storyImg{
+    width: 46px;
+    height: auto;
+    padding: 3px 3px;
+    object-fit: contain;
+    border: 1px solid rgb(243, 38, 38);
+    border-radius: 123px;
+}
 
 @media all and (max-width: 595px)  {
     .storySection{    
-        margin-top: 15%;
+        margin-top: 10vh;
         margin-bottom: 0px;
          max-width: 100%;
          height: 12vh;

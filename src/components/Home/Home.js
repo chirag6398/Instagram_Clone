@@ -1,10 +1,10 @@
 import React from 'react';
 import Post from "./Post";
 import homeStyle from "../../styles/home.module.css";
-import avatarimg from "../../images/demoUserImg.jpg";
+
 import { NavLink } from "react-router-dom";
-import Header from "../header";
-import Avatar from "@material-ui/core/Avatar";
+import Header from "../header";import Avatar from "@material-ui/core/Avatar";
+import storyimg from "../../images/storyimg.jpg"
 
 export default function Home(props) {
 
@@ -20,7 +20,7 @@ export default function Home(props) {
         {
           props.post.map((val,i)=>{
             return <div key={i} className={homeStyle.userStoryImg}>
-          <NavLink to="/story">  <Avatar  alt="..." src={avatarimg} /></NavLink>
+          <NavLink to="/story">  <img  alt="..." src={storyimg} className={homeStyle.storyImg} /></NavLink>
             </div>
           })
         }

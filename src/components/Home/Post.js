@@ -38,7 +38,7 @@ export default function Post(props) {
             
                 <Avatar className={postStyle.post_header_img} alt="..." src={props.avatarimg} />
                 <h3 style={{fontSize:"larger"}}>{props.username}</h3>
-                <span style={{cursor:"pointer",opacity:"0.7",fontWeight:"bolder",position:"relative",right:"-20vw"}}>...</span>
+                <span className={postStyle.dots}>...</span>
             </div>
 
 

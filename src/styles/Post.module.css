@@ -24,7 +24,7 @@
     display: flex;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+    height: 10vh;
     padding: 1vw;
     border-bottom: 1px solid lightgray;
     border-radius: 2px;
@@ -112,8 +112,23 @@
     opacity: 1;
     color:rgb(19, 125, 163);
 }
+.dots{
+    position: absolute;
+    right: 52vw;
+    cursor: pointer;
+    font-weight: bolder;
+    opacity: 0.6;
+
+}
 
 @media all and (max-width: 595px)  {
+    .dots{
+        position: absolute;
+        right: 6vw;
+        cursor: pointer;
+        font-weight: bolder;
+        opacity: 0.6;
+    }
     .post_container{
         margin-top: -1vh;
         margin-bottom: 0vh;

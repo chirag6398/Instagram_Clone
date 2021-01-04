@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './App.css';
+import "./App.css";
 import Home from "./components/Home/Home";
 import { BrowserRouter, Route } from "react-router-dom";
 import Comment from "./components/CommentSection/Comment";
@@ -12,76 +12,84 @@ function App() {
       posturl: userImg,
       postCaption: "#carying",
       avatarUrl: userImg,
-      userName: "chirag_agarwal112"
+      userName: "username__1",
     },
     {
       posturl: userImg,
       postCaption: "#carying",
       avatarUrl: userImg,
-      userName: "anas@cool"
+      userName: "username__2",
     },
     {
       posturl: userImg,
       postCaption: "#carying",
       avatarUrl: userImg,
-      userName: "shivam@looking..."
+      userName: "username__3",
     },
     {
       posturl: userImg,
       postCaption: "#carying",
       avatarUrl: userImg,
-      userName: "garima@kuposhadkishikaar"
+      userName: "username__4",
     },
     {
       posturl: userImg,
       postCaption: "#carying",
       avatarUrl: userImg,
-      userName: "sparsh@exitedforbha.."
+      userName: "username__5",
     },
     {
       posturl: userImg,
       postCaption: "#carying",
       avatarUrl: userImg,
-      userName: "arpit@gyanibaba"
+      userName: "username__6",
     },
     {
       posturl: userImg,
       postCaption: "#carying",
       avatarUrl: userImg,
-      userName: "sudheer@intelligent"
+      userName: "username__7",
     },
     {
       posturl: userImg,
       postCaption: "#carying",
       avatarUrl: userImg,
-      userName: "username7"
+      userName: "username__8",
     },
     {
       posturl: userImg,
       postCaption: "#carying",
       avatarUrl: userImg,
-      userName: "username8"
+      userName: "username__9",
     },
     {
       posturl: userImg,
       postCaption: "#carying",
       avatarUrl: userImg,
-      userName: "username9"
-    }]);
+      userName: "username__10",
+    },
+  ]);
 
-    var isTrue=false;
-    if(isTrue){
-      setPost([]);
-    }
+  var isTrue = false;
+  if (isTrue) {
+    setPost([]);
+  }
 
-  return (<BrowserRouter>
-    <div className="app">
-    
-    <Route exact path="/"> <Home post={post} /></Route>
-    <Route exact path="/comment"><Comment data={post}/></Route>
-    <Route exact path="/story"><Story data={post}/></Route>    
-    </div>
-  </BrowserRouter>
+  return (
+    <BrowserRouter>
+      <div className="app">
+        <Route exact path="/">
+          {" "}
+          <Home post={post} />
+        </Route>
+        <Route exact path="/comment">
+          <Comment data={post} />
+        </Route>
+        <Route exact path="/story">
+          <Story data={post} />
+        </Route>
+      </div>
+    </BrowserRouter>
   );
 }
 

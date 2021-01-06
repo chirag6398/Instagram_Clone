@@ -69,7 +69,6 @@ export default function Comment(props) {
                 <div className={commentStyle.chatHeader}>
                   <Avatar alt="..." src={userimg} />
                   <p className={commentStyle.chatUserName}>
-                    {" "}
                     {chatperson.userName}
                   </p>
                   <div className={commentStyle.messagePart}>

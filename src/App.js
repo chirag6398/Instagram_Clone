@@ -5,6 +5,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Comment from "./components/CommentSection/Comment";
 import userImg from "./images/demoUserImg.jpg";
 import Story from "./components/StoryHeader/Userstories";
+import Login from "./components/login";
 
 function App() {
   const [post, setPost] = useState([
@@ -79,8 +80,10 @@ function App() {
     <BrowserRouter>
       <div className="app">
         <Route exact path="/">
-          {" "}
           <Home post={post} />
+        </Route>
+        <Route exact path="/login">
+          <Login />
         </Route>
         <Route exact path="/comment">
           <Comment data={post} />

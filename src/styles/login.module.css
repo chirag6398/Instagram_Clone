@@ -1,0 +1,77 @@
+.login_extdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 11%;
+  margin-right: auto;
+}
+.login__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 367px;
+  justify-content: center;
+  padding: 20px 20px;
+  border: 1px solid lightgray;
+  background-color: #fff;
+  border-radius: 3px;
+}
+.sideimg {
+  object-fit: contain;
+  width: 319px;
+  margin-left: 139px;
+}
+.insta_logo {
+  margin-bottom: 35px;
+  object-fit: contain;
+  min-height: 8vh;
+}
+.login__inpt {
+  margin-top: 10px;
+  padding: 18px 40px;
+  height: 41px;
+  opacity: 0.8;
+  border-radius: 3px;
+  border-width: thin;
+  border-color: cyan;
+}
+.login_btn {
+  background-color: #6666ff;
+  opacity: 0.5;
+  width: 76%;
+  height: 31px;
+  margin-top: 10px;
+  border: 1px solid gray;
+}
+.line_OR {
+  opacity: 0.5;
+  margin-top: 8px;
+}
+.line_OR::before {
+  content: "_________________";
+  position: relative;
+  top: -7px;
+}
+.line_OR::after {
+  content: "_________________";
+  position: relative;
+  top: -7px;
+}
+@media all and (max-width: 990px) {
+  .login_extdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sideimg {
+    display: none;
+  }
+}

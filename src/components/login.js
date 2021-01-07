@@ -1,12 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import loginStyle from "../styles/login.module.css";
 import logo from "../images/instaLogo.png";
 import Adnld from "../images/Appleplaystore.png";
 import Gps from "../images/googleplaystore.png";
 import sideImg from "../images/sidePhoneimg.png";
 import fIcon from "../images/facebookIcon.png";
+import { auth } from "../firebase/firebase";
+import { useHistory } from "react-router-dom";
 
-export default function login() {
+export default function Login({ LoginUser }) {
+  const history = useHistory();
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const [password, setPassword] = useState("");
+
+  const signInHandler = (e) => {
+    e.preventDefault();
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((user) => {
+        history.push("/");
+      })
+      .catch((err) => {
+        console.log(err.message);
+        setError(err.message);
+      });
+  };
+
+  const registerHandler = (e) => {
+    e.preventDefault();
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((user) => {
+        history.push("/");
+      })
+      .catch((err) => {
+        setError(err.message);
+      });
+  };
+
   return (
     <div
       className={loginStyle.loginPage}
@@ -16,19 +48,45 @@ export default function login() {
       <div className={loginStyle.login_extdiv}>
         <div className={loginStyle.login__container}>
           <img src={logo} alt="..." className={loginStyle.insta_logo} />
-          <input
-            type="text"
-            placeholder="email..."
-            className={loginStyle.login__inpt}
-          ></input>
-          <input
-            type="password"
-            placeholder="password..."
-            className={loginStyle.login__inpt}
-          ></input>
-          <button type="submit" className={loginStyle.login_btn}>
-            Login
-          </button>
+          <form className={loginStyle.login_form}>
+            <h6
+              style={{
+                fontFamily: "verana",
+                fontWeight: "thin",
+                color: "red",
+                margin: "10px 10px",
+              }}
+            >
+              {error}
+            </h6>
+
+            <input
+              type="text"
+              placeholder="email..."
+              className={loginStyle.login__inpt}
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            ></input>
+            <input
+              type="password"
+              placeholder="password..."
+              className={loginStyle.login__inpt}
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+            ></input>
+            <button
+              type="submit"
+              onClick={signInHandler}
+              className={loginStyle.login_btn}
+            >
+              Login
+            </button>
+          </form>
+
           <span className={loginStyle.line_OR}>OR</span>
 
           <h6
@@ -54,14 +112,18 @@ export default function login() {
           className={loginStyle.login__container}
           style={{ marginTop: "10px" }}
         >
-          <h6 style={{ fontWeight: "thin" }}>
-            Don't have an Account ?
-            <span
-              style={{ color: "blue", fontWeight: "thin", cursor: "pointer" }}
-            >
-              SignUp
-            </span>
-          </h6>
+          <form>
+            <h6 style={{ fontWeight: "thin" }}>
+              Don't have an Account ?
+              <button
+                onClick={registerHandler}
+                type="button"
+                style={{ color: "blue", fontWeight: "thin", border: "none" }}
+              >
+                SignUp
+              </button>
+            </h6>
+          </form>
         </div>
 
         <div

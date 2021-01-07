@@ -21,6 +21,12 @@
   background-color: #fff;
   border-radius: 3px;
 }
+.login_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .sideimg {
   object-fit: contain;
   width: 319px;
@@ -43,10 +49,15 @@
 .login_btn {
   background-color: #6666ff;
   opacity: 0.5;
-  width: 76%;
+  width: 245px;
   height: 31px;
   margin-top: 10px;
   border: 1px solid gray;
+  transition: all 1s;
+}
+.login_btn:hover {
+  box-shadow: 2px 2px 3px violet;
+  opacity: 1;
 }
 .line_OR {
   opacity: 0.5;

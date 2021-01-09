@@ -48,6 +48,7 @@ export default function Login({ LoginUser }) {
       <div className={loginStyle.login_extdiv}>
         <div className={loginStyle.login__container}>
           <img src={logo} alt="..." className={loginStyle.insta_logo} />
+
           <form className={loginStyle.login_form}>
             <h6
               style={{

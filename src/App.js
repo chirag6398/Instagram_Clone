@@ -90,7 +90,7 @@ function App() {
     <BrowserRouter>
       <div className="app">
         <Route exact path="/">
-          <Home post={post} />
+          <Home post={post} LoginUser={loginUser} />
         </Route>
         <Route exact path="/login">
           <Login LoginUser={loginUser} />

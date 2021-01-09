@@ -15,6 +15,10 @@
   flex-direction: row;
   overflow-x: scroll;
 }
+.home_sugestionPortion {
+  display: flex;
+  margin: 94px 9px;
+}
 .storySection::-webkit-scrollbar {
   display: none;
 }
@@ -43,6 +47,9 @@
     overflow-x: scroll;
     border: 1px solid lightgray;
     border-radius: 2px;
+  }
+  .home_sugestionPortion {
+    display: none;
   }
 
   .userimg {

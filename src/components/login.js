@@ -22,7 +22,6 @@ export default function Login({ LoginUser }) {
         history.push("/");
       })
       .catch((err) => {
-        console.log(err.message);
         setError(err.message);
       });
   };
@@ -119,7 +118,12 @@ export default function Login({ LoginUser }) {
               <button
                 onClick={registerHandler}
                 type="button"
-                style={{ color: "blue", fontWeight: "thin", border: "none" }}
+                style={{
+                  color: "blue",
+                  fontWeight: "thin",
+                  border: "none",
+                  backgroundColor: "white",
+                }}
               >
                 SignUp
               </button>

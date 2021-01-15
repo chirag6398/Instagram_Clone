@@ -1,7 +1,6 @@
 import { Avatar } from "@material-ui/core";
 import React from "react";
 import sugestionStyle from "../../styles/sugestion.module.css";
-// import Avatar from "@material-ui/core/Avatar";
 import avatarimg from "../../images/demoUserImg.jpg";
 import duserImg from "../../images/storyimg.jpg";
 export default function Sugetion({ user }) {

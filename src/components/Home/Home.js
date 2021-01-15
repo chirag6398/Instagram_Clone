@@ -2,7 +2,7 @@ import React from "react";
 import Post from "./Post";
 import homeStyle from "../../styles/home.module.css";
 import { NavLink } from "react-router-dom";
-import Header from "../header";
+import Header from "../Header";
 import storyimg from "../../images/storyimg.jpg";
 import Sugestion from "./Sugetion";
 
@@ -10,7 +10,7 @@ export default function Home(props) {
   return (
     <>
       <div>
-        <Header />
+        <Header user={props.LoginUser} />
         <div className={homeStyle.home_extdiv} style={{ display: "flex" }}>
           <div className={homeStyle.container}>
             <div className={homeStyle.storySection}>

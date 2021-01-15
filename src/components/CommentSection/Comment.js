@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "../header";
+import Header from "../Header";
 import commentStyle from "../../styles/Comment.module.css";
 import arrImg from "../../images/arrcommentimg.png";
 import userimg from "../../images/demoUserImg.jpg";

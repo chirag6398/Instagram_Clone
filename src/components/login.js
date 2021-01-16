@@ -13,12 +13,21 @@ export default function Login({ LoginUser }) {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [password, setPassword] = useState("");
+  const [disabled, setDisabled] = useState(true);
+  const [processing, setProcesing] = useState();
+  const [successed, setSuccessed] = useState(false);
+  const [dynUrl, setDynUrl] = useState(
+    "https://www.instagram.com/static/images/homepage/screenshot5.jpg/0a2d3016f375.jpg"
+  );
 
   const signInHandler = (e) => {
     e.preventDefault();
+    setProcesing(true);
     auth
       .signInWithEmailAndPassword(email, password)
       .then((user) => {
+        setProcesing(false);
+        setSuccessed(true);
         history.push("/");
       })
       .catch((err) => {
@@ -28,22 +37,36 @@ export default function Login({ LoginUser }) {
 
   const registerHandler = (e) => {
     e.preventDefault();
+    setProcesing(true);
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((user) => {
+        setProcesing(false);
+        setSuccessed(true);
         history.push("/");
       })
       .catch((err) => {
         setError(err.message);
       });
   };
+  const urls = [
+    "https://www.instagram.com/static/images/homepage/screenshot2.jpg/6f03eb85463c.jpg",
+    "https://www.instagram.com/static/images/homepage/screenshot3.jpg/f0c687aa6ec2.jpg",
+    "https://www.instagram.com/static/images/homepage/screenshot4.jpg/842fe5699220.jpg",
+    "https://www.instagram.com/static/images/homepage/screenshot5.jpg/0a2d3016f375.jpg",
+    "https://www.instagram.com/static/images/homepage/screenshot1.jpg/d6bf0c928b5a.jpg",
+  ];
+  const seturl = () => {
+    setDynUrl(urls[Math.floor(Math.random() * 5)]);
+  };
+
+  // setTimeout(seturl, 5000);
+  setInterval(seturl, 5000);
 
   return (
-    <div
-      className={loginStyle.loginPage}
-      style={{ display: "flex", justifyContent: "space-around" }}
-    >
+    <div className={loginStyle.loginPage}>
       <img src={sideImg} alt="..." className={loginStyle.sideimg} />
+      <img src={dynUrl} alt="..." className={loginStyle.dynamicImg} />
       <div className={loginStyle.login_extdiv}>
         <div className={loginStyle.login__container}>
           <img src={logo} alt="..." className={loginStyle.insta_logo} />
@@ -76,14 +99,16 @@ export default function Login({ LoginUser }) {
               value={password}
               onChange={(e) => {
                 setPassword(e.target.value);
+                if (email && password) setDisabled(false);
               }}
             ></input>
             <button
               type="submit"
               onClick={signInHandler}
+              disabled={processing || disabled || successed}
               className={loginStyle.login_btn}
             >
-              Login
+              {processing ? "processing" : successed ? "successed" : "Login"}
             </button>
           </form>
 

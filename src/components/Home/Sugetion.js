@@ -9,7 +9,7 @@ export default function Sugetion({ user }) {
       <div className={sugestionStyle.sugestion_userSection}>
         <Avatar alt="..." src={avatarimg} />
         <div className={sugestionStyle.user_follow_style}>
-          <p>{user}</p>
+          <p>{user ? <span>{user}</span> : "chirag112_agrawal"}</p>
           <p style={{ color: "blue", fontWeight: "600" }}>Switch</p>
         </div>
       </div>

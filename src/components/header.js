@@ -14,10 +14,12 @@ export default function Header({ user }) {
   const history = useHistory();
   const logoutHandler = () => {
     if (user) {
+      alert("You will we logout and need to signIn again");
       auth
         .signOut()
         .then(() => {
           // console.log("succ.. logout..");
+          history.push("/login");
         })
         .catch((err) => {
           // console.log(err);
@@ -41,9 +43,13 @@ export default function Header({ user }) {
         </NavLink>
         <img src={compassIcon} alt="..." className={headerStyle.cpsIcon} />
         <img src={heartIcon} alt="..." className={headerStyle.hrtIcon} />
-        {/* <Link to={!user && "/login"}> */}
-        <Avatar alt="..." onClick={logoutHandler} src={avatarimg} />
-        {/* </Link> */}
+
+        <Avatar
+          alt="..."
+          onClick={logoutHandler}
+          style={{ cursor: "pointer" }}
+          src={avatarimg}
+        />
       </div>
     </div>
   );

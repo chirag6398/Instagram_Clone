@@ -27,6 +27,22 @@
   border-bottom: 1px solid lightgray;
   border-radius: 2px;
 }
+.dblclickHrt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: whitesmoke;
+  animation: showHeart 1s linear;
+
+  -webkit-animation: showHeart 1s linear;
+}
+@keyframes showHeart {
+  100% {
+    opacity: 0;
+    transform: skew(100);
+  }
+}
 .hrtIcon {
   position: absolute;
   right: 52%;

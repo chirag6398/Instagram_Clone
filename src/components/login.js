@@ -28,6 +28,9 @@ export default function Login({ LoginUser }) {
       .then((user) => {
         setProcesing(false);
         setSuccessed(true);
+        // setTimeout(() => {
+        //   history.push("/");
+        // }, 2000);
         history.push("/");
       })
       .catch((err) => {

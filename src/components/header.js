@@ -18,12 +18,9 @@ export default function Header({ user }) {
       auth
         .signOut()
         .then(() => {
-          // console.log("succ.. logout..");
           history.push("/login");
         })
-        .catch((err) => {
-          // console.log(err);
-        });
+        .catch((err) => {});
     } else {
       history.push("/login");
     }

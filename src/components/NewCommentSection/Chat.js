@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import chatStyle from "../../styles/chat.module.css";
 
 import { Avatar, IconButton } from "@material-ui/core";
-import { db } from "../../firebase/firebase";
+
 import MicIcon from "@material-ui/icons/MicNoneOutlined";
 import SentimentVerySatisfiedIcon from "@material-ui/icons/SentimentVerySatisfied";
 
@@ -10,7 +10,7 @@ export default function Chat() {
   const [seed, setSeed] = useState("");
   const [input, setInput] = useState("");
 
-  const [messages, setMessages] = useState([{ message: "" }]);
+  const [messages, setMessages] = useState([]);
   const divRef = useRef(null);
 
   useEffect(() => {
@@ -24,12 +24,7 @@ export default function Chat() {
   const sendMessage = (e) => {
     e.preventDefault();
 
-    setMessages({
-      ...messages,
-      message: input,
-    });
-
-    console.log(messages);
+    setMessages([...messages, input]);
 
     setInput("");
   };
@@ -43,18 +38,18 @@ export default function Chat() {
         </div>
       </div>
       <div className={chatStyle.chat_body}>
-        {/* {messages.map((message, i) => {
+        {messages?.map((message, i) => {
           return (
             <div key={i}>
               <p
                 className={`${chatStyle.message} ${true && chatStyle.receiver}`}
               >
-                {message.message}
+                {message}
               </p>
               <div ref={divRef} />
             </div>
           );
-        })} */}
+        })}
       </div>
       <div className={chatStyle.chat_footer}>
         <IconButton>

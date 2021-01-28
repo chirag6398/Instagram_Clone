@@ -10,10 +10,10 @@ import { NavLink, useHistory } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
 import { auth } from "../firebase/firebase";
 
-export default function Header({ user }) {
+export default function Header(props) {
   const history = useHistory();
   const logoutHandler = () => {
-    if (user) {
+    if (props) {
       alert("You will we logout and need to signIn again");
       auth
         .signOut()

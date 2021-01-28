@@ -21,7 +21,9 @@ export default function Sidebar(props) {
         </div>
       </div> */}
       <div className={sidebarStyle.sidebar_chats}>
-        <Sidebarchats data={props.data} />
+        {props.data.map((val, i) => {
+          return <Sidebarchats key={i} userName={val.userName} />;
+        })}
       </div>
     </div>
   );

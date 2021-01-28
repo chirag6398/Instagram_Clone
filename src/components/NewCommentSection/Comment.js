@@ -11,8 +11,7 @@ export default function Comment(props) {
       <div className={commentStyle.ext_div}>
         <div className={commentStyle.center_div}>
           <Sidebar data={props.data} />
-          {/* <Chat /> */}
-          {console.log(props)}
+          <Chat />
         </div>
       </div>
     </>

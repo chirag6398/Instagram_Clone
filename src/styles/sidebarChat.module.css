@@ -6,7 +6,7 @@
   cursor: pointer;
   border-bottom: 1px solid #f6f6f6;
 }
-.sidebarchat_info:hover {
+.container:hover {
   background-color: #ebebeb;
 }
 .sidebarchat_info {

@@ -99,6 +99,9 @@ function App() {
         <Route exact path="/comment">
           <Comment data={post} />
         </Route>
+        <Route exact path="/:userName">
+          <Comment data={post} />
+        </Route>
         <Route exact path="/story">
           <Story data={post} />
         </Route>

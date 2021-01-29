@@ -6,7 +6,7 @@ import { Avatar, IconButton } from "@material-ui/core";
 import MicIcon from "@material-ui/icons/MicNoneOutlined";
 import SentimentVerySatisfiedIcon from "@material-ui/icons/SentimentVerySatisfied";
 
-export default function Chat() {
+export default function Chat(props) {
   const [seed, setSeed] = useState("");
   const [input, setInput] = useState("");
 
@@ -33,7 +33,7 @@ export default function Chat() {
       <div className={chatStyle.chat_header}>
         <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
         <div className={chatStyle.header_info}>
-          <h3>userName</h3>
+          <h3>{props.userName.userName}</h3>
           <p>Last seen at{new Date().toLocaleTimeString()}</p>
         </div>
       </div>

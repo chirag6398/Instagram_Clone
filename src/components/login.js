@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import loginStyle from "../styles/login.module.css";
 import logo from "../images/instaLogo.png";
 import Adnld from "../images/Appleplaystore.png";
@@ -19,7 +19,24 @@ export default function Login({ LoginUser }) {
   const [dynUrl, setDynUrl] = useState(
     "https://www.instagram.com/static/images/homepage/screenshot5.jpg/0a2d3016f375.jpg"
   );
+  const urls = [
+    "https://www.instagram.com/static/images/homepage/screenshot2.jpg/6f03eb85463c.jpg",
+    "https://www.instagram.com/static/images/homepage/screenshot3.jpg/f0c687aa6ec2.jpg",
+    "https://www.instagram.com/static/images/homepage/screenshot4.jpg/842fe5699220.jpg",
+    "https://www.instagram.com/static/images/homepage/screenshot5.jpg/0a2d3016f375.jpg",
+    "https://www.instagram.com/static/images/homepage/screenshot1.jpg/d6bf0c928b5a.jpg",
+  ];
 
+  const seturl = () => {
+    setDynUrl(urls[Math.floor(Math.random() * 5)]);
+  };
+
+  useEffect(() => {
+    setInterval(seturl, 3000);
+    return () => {
+      clearInterval(seturl);
+    };
+  }, [urls, seturl]);
   const signInHandler = (e) => {
     e.preventDefault();
     setProcesing(true);
@@ -28,13 +45,12 @@ export default function Login({ LoginUser }) {
       .then((user) => {
         setProcesing(false);
         setSuccessed(true);
-        // setTimeout(() => {
-        //   history.push("/");
-        // }, 2000);
+
         history.push("/");
       })
       .catch((err) => {
         setError(err.message);
+        setProcesing(false);
       });
   };
 
@@ -50,21 +66,9 @@ export default function Login({ LoginUser }) {
       })
       .catch((err) => {
         setError(err.message);
+        setProcesing(false);
       });
   };
-  const urls = [
-    "https://www.instagram.com/static/images/homepage/screenshot2.jpg/6f03eb85463c.jpg",
-    "https://www.instagram.com/static/images/homepage/screenshot3.jpg/f0c687aa6ec2.jpg",
-    "https://www.instagram.com/static/images/homepage/screenshot4.jpg/842fe5699220.jpg",
-    "https://www.instagram.com/static/images/homepage/screenshot5.jpg/0a2d3016f375.jpg",
-    "https://www.instagram.com/static/images/homepage/screenshot1.jpg/d6bf0c928b5a.jpg",
-  ];
-  const seturl = () => {
-    setDynUrl(urls[Math.floor(Math.random() * 5)]);
-  };
-
-  // setTimeout(seturl, 5000);
-  setInterval(seturl, 5000);
 
   return (
     <div className={loginStyle.loginPage}>

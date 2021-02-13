@@ -3,7 +3,6 @@ import "./App.css";
 import Home from "./components/Home/Home";
 import { BrowserRouter, Route } from "react-router-dom";
 import Comment from "./components/NewCommentSection/Comment";
-// import Comment from "./components/CommentSection/Comment";
 import userImg from "./images/demoUserImg.jpg";
 import Story from "./components/StoryHeader/Userstories";
 import Login from "./components/Login";
@@ -99,7 +98,7 @@ function App() {
         <Route exact path="/comment">
           <Comment data={post} />
         </Route>
-        <Route exact path="/:userName">
+        <Route exact path="/comment/:userName">
           <Comment data={post} />
         </Route>
         <Route exact path="/story">

@@ -28,19 +28,23 @@
   border-radius: 2px;
 }
 .dblclickHrt {
-  position: absolute;
+  /* position: absolute;
   left: 50%;
-  top: 50%;
+  top: 50%; */
   transform: translate(-50%, -50%);
   color: whitesmoke;
   animation: showHeart 1s linear;
 
   -webkit-animation: showHeart 1s linear;
 }
+.post__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @keyframes showHeart {
   100% {
     opacity: 0;
-    transform: skew(100);
   }
 }
 .hrtIcon {

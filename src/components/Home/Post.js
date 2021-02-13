@@ -26,6 +26,7 @@ export default function Post(props) {
       setCount2(count2 + 1);
     }
   };
+
   const hrtHandler2 = () => {
     setCount2(count2 + 1);
   };
@@ -58,7 +59,10 @@ export default function Post(props) {
         </span>
       </div>
 
-      <div style={{ width: "auto", height: "auto" }}>
+      <div
+        className={postStyle.post__img}
+        style={{ width: "auto", height: "auto" }}
+      >
         <img
           src={props.userimg}
           className={postStyle.user_img}
@@ -68,7 +72,7 @@ export default function Post(props) {
         {showHrt ? (
           <FavoriteIcon
             className={postStyle.dblclickHrt}
-            style={{ fontSize: 60 }}
+            style={{ fontSize: 70, position: "absolute" }}
           />
         ) : null}
       </div>

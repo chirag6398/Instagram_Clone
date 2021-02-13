@@ -79,6 +79,10 @@ p {
   border: none;
   padding: 10px;
   flex: 1;
+  background-color: rgb(238, 231, 231);
+}
+.chat__input:focus {
+  outline: none;
 }
 .chat_footer > form > button {
   border: none;

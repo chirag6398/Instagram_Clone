@@ -48,6 +48,7 @@
   padding: 18px 40px;
   height: 41px;
   opacity: 0.8;
+  outline: none;
   border-radius: 3px;
   border-width: thin;
   border-color: cyan;

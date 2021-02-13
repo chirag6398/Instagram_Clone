@@ -7,7 +7,7 @@ export default function Sidebarchat(props) {
   const history = useHistory();
   const [seed, setSeed] = useState("");
   const sideChatHandler = () => {
-    history.push(`${props.userName}`);
+    history.push(`/comment/${props.userName}`);
   };
   useEffect(() => {
     setSeed(Math.floor(Math.random() * 5000));

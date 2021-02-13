@@ -58,6 +58,7 @@ export default function Chat(props) {
 
         <form>
           <input
+            className={chatStyle.chat__input}
             type="text"
             value={input}
             onChange={(e) => {

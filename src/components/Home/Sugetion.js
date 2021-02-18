@@ -7,40 +7,50 @@ export default function Sugetion({ user }) {
   return (
     <div className={sugestionStyle.sugestion_container}>
       <div className={sugestionStyle.sugestion_userSection}>
-        <Avatar alt="..." src={avatarimg} />
+        <Avatar style={{ cursor: "pointer" }} alt="..." src={avatarimg} />
         <div className={sugestionStyle.user_follow_style}>
           <p>{user ? <span>{user}</span> : "chirag112_agrawal"}</p>
-          <p style={{ color: "blue", fontWeight: "600" }}>Switch</p>
+          <p style={{ color: "blue", fontWeight: "600", cursor: "pointer" }}>
+            Switch
+          </p>
         </div>
       </div>
       <b style={{ color: "gray" }}>suggestions for you</b>
       <b style={{ marginLeft: "30px" }}>see all</b>
       <div className={sugestionStyle.sugestion_userSection}>
-        <Avatar alt="..." src={duserImg} />
+        <Avatar style={{ cursor: "pointer" }} alt="..." src={duserImg} />
         <div className={sugestionStyle.user_follow_style}>
           <p>user_name</p>
-          <p style={{ color: "blue", fontWeight: "600" }}>Follow</p>
+          <p style={{ color: "blue", fontWeight: "600", cursor: "pointer" }}>
+            Follow
+          </p>
         </div>
       </div>
       <div className={sugestionStyle.sugestion_userSection}>
-        <Avatar alt="..." src={duserImg} />
+        <Avatar style={{ cursor: "pointer" }} alt="..." src={duserImg} />
         <div className={sugestionStyle.user_follow_style}>
           <p>user_name</p>
-          <p style={{ color: "blue", fontWeight: "600" }}>Follow</p>
+          <p style={{ color: "blue", fontWeight: "600", cursor: "pointer" }}>
+            Follow
+          </p>
         </div>
       </div>
       <div className={sugestionStyle.sugestion_userSection}>
-        <Avatar alt="..." src={duserImg} />
+        <Avatar style={{ cursor: "pointer" }} alt="..." src={duserImg} />
         <div className={sugestionStyle.user_follow_style}>
           <p>user_name</p>
-          <p style={{ color: "blue", fontWeight: "600" }}>Follow</p>
+          <p style={{ color: "blue", fontWeight: "600", cursor: "pointer" }}>
+            Follow
+          </p>
         </div>
       </div>
       <div className={sugestionStyle.sugestion_userSection}>
-        <Avatar alt="..." src={duserImg} />
+        <Avatar style={{ cursor: "pointer" }} alt="..." src={duserImg} />
         <div className={sugestionStyle.user_follow_style}>
           <p>user_name</p>
-          <p style={{ color: "blue", fontWeight: "600" }}>Follow</p>
+          <p style={{ color: "blue", fontWeight: "600", cursor: "pointer" }}>
+            Follow
+          </p>
         </div>
       </div>
     </div>

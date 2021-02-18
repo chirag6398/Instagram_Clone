@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import postStyle from "../../styles/Post.module.css";
 import Avatar from "@material-ui/core/Avatar";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -8,6 +8,7 @@ import arrIcon from "../../images/arrow.png";
 import redHrt from "../../images/redHrt.png";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 export default function Post(props) {
   const [comments, setComments] = useState({ comment: "" });
@@ -16,6 +17,16 @@ export default function Post(props) {
   const [count, setCount] = useState(1);
   const [count2, setCount2] = useState(1);
   const [showHrt, setShowHrt] = useState(false);
+  const [isScreenXsizeMobileView, setIsScreeMobileView] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth <= 600) {
+      setIsScreeMobileView(true);
+    } else {
+      setIsScreeMobileView(false);
+    }
+  }, []);
+
   const doubleClickHandler = () => {
     setShowHrt(true);
     setTimeout(() => {
@@ -55,7 +66,7 @@ export default function Post(props) {
         />
         <h3 style={{ fontSize: "larger" }}>{props.username}</h3>
         <span className={postStyle.dots}>
-          <MoreHorizIcon />
+          {isScreenXsizeMobileView ? <MoreVertIcon /> : <MoreHorizIcon />}
         </span>
       </div>
 

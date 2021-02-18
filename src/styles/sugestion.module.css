@@ -8,11 +8,15 @@
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   flex-wrap: wrap;
 }
+
 .user_follow_style {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex: 1;
+}
+.user_follow_style > p {
+  cursor: pointer;
 }
 .sugestion_container {
   margin-top: 14px;

@@ -54,3 +54,6 @@ searchContainer > .MuiSvgIcon-root {
   background-color: white;
   overflow: scroll;
 }
+.sidebar_chats::-webkit-scrollbarx {
+  display: none;
+}

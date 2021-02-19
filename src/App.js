@@ -92,10 +92,13 @@ function App() {
         <Route exact path="/">
           <Home post={post} LoginUser={loginUser} />
         </Route>
+        <Route exact path="/:page">
+          <Home post={post} LoginUser={loginUser} />
+        </Route>
         <Route exact path="/login">
           <Login LoginUser={loginUser} />
         </Route>
-        <Route exact path="/comment">
+        <Route exact path="/commentsection/:page">
           <Comment data={post} />
         </Route>
         <Route exact path="/comment/:userName">

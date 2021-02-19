@@ -4,17 +4,21 @@ import instaLogo from "../images/instaLogo.png";
 
 import avatarimg from "../images/demoUserImg.jpg";
 
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink, useHistory, useParams } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
 import { auth } from "../firebase/firebase";
 import SearchIcon from "@material-ui/icons/Search";
-import HomeIcon from "@material-ui/icons/Home";
+import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 import ExploreIcon from "@material-ui/icons/Explore";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import { IconButton } from "@material-ui/core";
-import TelegramIcon from "@material-ui/icons/Telegram";
+import SendRoundedIcon from "@material-ui/icons/SendRounded";
+import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
+import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
 
 export default function Header(props) {
+  const active_page = useParams();
+  console.log(active_page);
   const history = useHistory();
   const logoutHandler = () => {
     if (props) {
@@ -32,7 +36,7 @@ export default function Header(props) {
   return (
     <div className={headerStyle.ext_div}>
       <div className={headerStyle.header__logo}>
-        <NavLink activeClassName={headerStyle.active} to="/">
+        <NavLink activeClassName={headerStyle.active} to={`/${"home"}`}>
           <img src={instaLogo} alt=".." />
         </NavLink>
       </div>
@@ -45,21 +49,29 @@ export default function Header(props) {
       </div>
 
       <div className={headerStyle.links}>
-        <NavLink className={headerStyle.hIcon} to="/">
+        <NavLink className={headerStyle.hIcon} to="/home">
           <IconButton>
-            <HomeIcon />
+            {active_page.page == "home" && active_page ? (
+              <HomeRoundedIcon style={{ color: "black" }} />
+            ) : (
+              <HomeOutlinedIcon style={{ color: "black" }} />
+            )}
           </IconButton>
         </NavLink>
-        <NavLink to="/comment">
+        <NavLink to={`/commentsection/${"comment"}`}>
           <IconButton>
-            <TelegramIcon />
+            {active_page.page == "comment" ? (
+              <SendRoundedIcon style={{ color: "black" }} />
+            ) : (
+              <SendOutlinedIcon style={{ color: "black" }} />
+            )}
           </IconButton>
         </NavLink>
         <IconButton>
-          <ExploreIcon />
+          <ExploreIcon style={{ color: "black" }} />
         </IconButton>
         <IconButton>
-          <FavoriteIcon />
+          <FavoriteIcon style={{ color: "black" }} />
         </IconButton>
 
         <Avatar

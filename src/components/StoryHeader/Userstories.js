@@ -16,12 +16,13 @@ export default function Userstories(props) {
       autoplay: 1,
     },
   };
+
   return (
     <div className={storyStyle.ext_div}>
-      <NavLink to="/">
+      <NavLink to="/home/home">
         <img className={storyStyle.logo} alt="..." src={logo}></img>
       </NavLink>
-      <NavLink to="/">
+      <NavLink to="/home/home">
         <img className={storyStyle.mSymbol} alt=".." src={multyplysymbol}></img>
       </NavLink>
 

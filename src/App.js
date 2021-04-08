@@ -92,7 +92,7 @@ function App() {
         <Route exact path="/">
           <Home post={post} LoginUser={loginUser} />
         </Route>
-        <Route exact path="/:page">
+        <Route exact path="/home/:page">
           <Home post={post} LoginUser={loginUser} />
         </Route>
         <Route exact path="/login">

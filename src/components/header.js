@@ -18,7 +18,7 @@ import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
 
 export default function Header(props) {
   const active_page = useParams();
-  console.log(active_page);
+
   const history = useHistory();
   const logoutHandler = () => {
     if (props) {
@@ -36,7 +36,7 @@ export default function Header(props) {
   return (
     <div className={headerStyle.ext_div}>
       <div className={headerStyle.header__logo}>
-        <NavLink activeClassName={headerStyle.active} to={`/${"home"}`}>
+        <NavLink activeClassName={headerStyle.active} to={`/home/${"home"}`}>
           <img src={instaLogo} alt=".." />
         </NavLink>
       </div>
@@ -49,7 +49,7 @@ export default function Header(props) {
       </div>
 
       <div className={headerStyle.links}>
-        <NavLink className={headerStyle.hIcon} to="/home">
+        <NavLink className={headerStyle.hIcon} to="/home/home">
           <IconButton>
             {active_page.page == "home" && active_page ? (
               <HomeRoundedIcon style={{ color: "black" }} />

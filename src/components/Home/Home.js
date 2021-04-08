@@ -23,7 +23,6 @@ export default function Home(props) {
                 return (
                   <div key={i} className={homeStyle.userStoryImg}>
                     <NavLink to="/story">
-                      {" "}
                       <img
                         alt="..."
                         src={storyimg}

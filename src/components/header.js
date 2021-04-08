@@ -51,7 +51,7 @@ export default function Header(props) {
       <div className={headerStyle.links}>
         <NavLink className={headerStyle.hIcon} to="/home/home">
           <IconButton>
-            {active_page.page == "home" && active_page ? (
+            {active_page.page === "home" && active_page ? (
               <HomeRoundedIcon style={{ color: "black" }} />
             ) : (
               <HomeOutlinedIcon style={{ color: "black" }} />
@@ -60,7 +60,7 @@ export default function Header(props) {
         </NavLink>
         <NavLink to={`/commentsection/${"comment"}`}>
           <IconButton>
-            {active_page.page == "comment" ? (
+            {active_page.page === "comment" ? (
               <SendRoundedIcon style={{ color: "black" }} />
             ) : (
               <SendOutlinedIcon style={{ color: "black" }} />

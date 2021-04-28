@@ -1,20 +1,20 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Post from "./Post";
 import homeStyle from "../../styles/home.module.css";
 import { NavLink } from "react-router-dom";
 import Header from "../Header";
 import storyimg from "../../images/storyimg.jpg";
 import Sugestion from "./Sugetion";
-import { TweenMax, Power3 } from "gsap";
+// import { TweenMax, Power3 } from "gsap";
 
 export default function Home(props) {
-  var divRef = useRef(null);
-  useEffect(() => {
-    TweenMax.from(divRef, 1, { x: -12000, duration: 2, ease: Power3.easeOut });
-  });
+  // var divRef = useRef(null);
+  // useEffect(() => {
+  //   TweenMax.from(divRef, 1, { x: -12000, duration: 2, ease: Power3.easeOut });ref={(el) => (divRef = el)}
+  // });
   return (
     <>
-      <div ref={(el) => (divRef = el)}>
+      <div>
         <Header user={props.LoginUser} />
         <div className={homeStyle.home_extdiv} style={{ display: "flex" }}>
           <div className={homeStyle.container}>

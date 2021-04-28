@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Home from "./components/Home/Home";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Comment from "./components/NewCommentSection/Comment";
 import userImg from "./images/demoUserImg.jpg";
 import Story from "./components/StoryHeader/Userstories";
@@ -89,24 +89,27 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app">
-        <Route exact path="/">
-          <Home post={post} LoginUser={loginUser} />
-        </Route>
-        <Route exact path="/home/:page">
-          <Home post={post} LoginUser={loginUser} />
-        </Route>
-        <Route exact path="/login">
-          <Login LoginUser={loginUser} />
-        </Route>
-        <Route exact path="/commentsection/:page">
-          <Comment data={post} />
-        </Route>
-        <Route exact path="/comment/:userName">
-          <Comment data={post} />
-        </Route>
-        <Route exact path="/story">
-          <Story data={post} />
-        </Route>
+        <Switch>
+          <Route exact path="/">
+            <Home post={post} LoginUser={loginUser} />
+          </Route>
+          <Route exact path="/login">
+            <Login LoginUser={loginUser} />
+          </Route>
+          <Route exact path="/:page">
+            <Home post={post} LoginUser={loginUser} />
+          </Route>
+
+          <Route exact path="/commentsection/:page">
+            <Comment data={post} />
+          </Route>
+          <Route exact path="/comment/:userName">
+            <Comment data={post} />
+          </Route>
+          <Route exact path="/story">
+            <Story data={post} />
+          </Route>
+        </Switch>
       </div>
     </BrowserRouter>
   );

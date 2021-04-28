@@ -16,27 +16,25 @@ export default function Login({ LoginUser }) {
   const [disabled, setDisabled] = useState(true);
   const [processing, setProcesing] = useState();
   const [successed, setSuccessed] = useState(false);
-  const [dynUrl, setDynUrl] = useState(
-    "https://www.instagram.com/static/images/homepage/screenshot5.jpg/0a2d3016f375.jpg"
-  );
-  const urls = [
+  const [randomNo, setRandomNo] = useState(0);
+  const [dynUrl] = useState([
     "https://www.instagram.com/static/images/homepage/screenshot2.jpg/6f03eb85463c.jpg",
     "https://www.instagram.com/static/images/homepage/screenshot3.jpg/f0c687aa6ec2.jpg",
     "https://www.instagram.com/static/images/homepage/screenshot4.jpg/842fe5699220.jpg",
     "https://www.instagram.com/static/images/homepage/screenshot5.jpg/0a2d3016f375.jpg",
     "https://www.instagram.com/static/images/homepage/screenshot1.jpg/d6bf0c928b5a.jpg",
-  ];
-
-  const seturl = () => {
-    setDynUrl(urls[Math.floor(Math.random() * 5)]);
-  };
+  ]);
 
   useEffect(() => {
-    setInterval(seturl, 3000);
+    const interval = setInterval(() => {
+      setRandomNo(Math.floor(Math.random() * 5));
+    }, 3000);
+
     return () => {
-      clearInterval(seturl);
+      clearInterval(interval);
     };
-  }, [urls, seturl]);
+  }, []);
+
   const signInHandler = (e) => {
     e.preventDefault();
     setProcesing(true);
@@ -46,7 +44,7 @@ export default function Login({ LoginUser }) {
         setProcesing(false);
         setSuccessed(true);
 
-        history.push("/");
+        history.push("/home");
       })
       .catch((err) => {
         setError(err.message);
@@ -62,7 +60,7 @@ export default function Login({ LoginUser }) {
       .then((user) => {
         setProcesing(false);
         setSuccessed(true);
-        history.push("/");
+        history.push("/home");
       })
       .catch((err) => {
         setError(err.message);
@@ -73,7 +71,7 @@ export default function Login({ LoginUser }) {
   return (
     <div className={loginStyle.loginPage}>
       <img src={sideImg} alt="..." className={loginStyle.sideimg} />
-      <img src={dynUrl} alt="..." className={loginStyle.dynamicImg} />
+      <img src={dynUrl[randomNo]} alt="..." className={loginStyle.dynamicImg} />
       <div className={loginStyle.login_extdiv}>
         <div className={loginStyle.login__container}>
           <img src={logo} alt="..." className={loginStyle.insta_logo} />

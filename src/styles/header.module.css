@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 100vw;
   padding: 10px 20px 10px 20px;
   height: 60px;
   background-color: white;
@@ -21,11 +21,13 @@
 
 .header__input {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .header__input > input {
   outline: none;
-  padding: 2px 5px 2px 88px;
+  text-align: center;
+  /* padding: 2px 5px 2px 88px; */
   border: 1px solid rgb(231, 224, 224);
 }
 

@@ -96,6 +96,9 @@ function App() {
           <Route exact path="/login">
             <Login LoginUser={loginUser} />
           </Route>
+          <Route exact path="/story">
+            <Story data={post} />
+          </Route>
           <Route exact path="/:page">
             <Home post={post} LoginUser={loginUser} />
           </Route>
@@ -105,9 +108,6 @@ function App() {
           </Route>
           <Route exact path="/comment/:userName">
             <Comment data={post} />
-          </Route>
-          <Route exact path="/story">
-            <Story data={post} />
           </Route>
         </Switch>
       </div>

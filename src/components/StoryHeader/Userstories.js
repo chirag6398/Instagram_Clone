@@ -19,10 +19,10 @@ export default function Userstories(props) {
 
   return (
     <div className={storyStyle.ext_div}>
-      <NavLink to="/home/home">
+      <NavLink to="/home">
         <img className={storyStyle.logo} alt="..." src={logo}></img>
       </NavLink>
-      <NavLink to="/home/home">
+      <NavLink to="/home">
         <img className={storyStyle.mSymbol} alt=".." src={multyplysymbol}></img>
       </NavLink>
 

@@ -5,17 +5,18 @@ import storyStyle from "../../styles/story.module.css";
 import logo from "../../images/instaStorylogo.png";
 import multyplysymbol from "../../images/multiplyicon.png";
 import Avatar from "@material-ui/core/Avatar";
-import YouTube from "react-youtube";
+// import YouTube from "react-youtube";
 
 export default function Userstories(props) {
-  const opts = {
-    height: "350",
-    width: "400",
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
-    },
-  };
+  // const opts = {
+  //   height: "350",
+  //   width: "400",
+  //   playerVars: {
+  //     autoplay: "1",
+  //     host: "https://www.youtube.com",
+  //     origin: "https://localhost:3000",
+  //   },
+  // };
 
   return (
     <div className={storyStyle.ext_div}>
@@ -29,11 +30,15 @@ export default function Userstories(props) {
       <div className={storyStyle.center_div}>
         <div className={storyStyle.userImgandName}>
           <Avatar alt="..." src={avatarimg} />
-          <h5>rdyhs{props.data.userName}</h5>
+          <h5>sahil@smarty112._.cool{props.data.userName}</h5>
         </div>
 
         <div className={storyStyle.video}>
-          <YouTube videoId="2g811Eo7K8U" opts={opts} />
+          <img
+            src="https://www.testbytes.net/wp-content/uploads/2019/06/Untitled-8.png"
+            alt="..."
+          />
+          {/* <YouTube videoId="2g811Eo7K8U" opts={opts} /> */}
         </div>
 
         <input

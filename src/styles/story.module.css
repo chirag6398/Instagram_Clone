@@ -25,8 +25,17 @@
   object-fit: contain;
 }
 .video {
-  overflow-x: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px;
+  height: 56vh;
+  width: 46vw;
+}
+.video > img {
+  object-fit: contain;
+  width: 400px;
+  min-width: 150px;
 }
 .video::-webkit-scrollbar {
   display: none;

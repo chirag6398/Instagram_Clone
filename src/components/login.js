@@ -5,13 +5,13 @@ import Adnld from "../images/Appleplaystore.png";
 import Gps from "../images/googleplaystore.png";
 import sideImg from "../images/sidePhoneimg.png";
 import fIcon from "../images/facebookIcon.png";
-import { auth } from "../firebase/firebase";
+// import { auth } from "../firebase/firebase";
 import { useHistory } from "react-router-dom";
 
-export default function Login({ LoginUser }) {
+export default function Login() {
   const history = useHistory();
   const [email, setEmail] = useState("");
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
   const [password, setPassword] = useState("");
   const [disabled, setDisabled] = useState(true);
   const [processing, setProcesing] = useState();
@@ -38,34 +38,17 @@ export default function Login({ LoginUser }) {
   const signInHandler = (e) => {
     e.preventDefault();
     setProcesing(true);
-    auth
-      .signInWithEmailAndPassword(email, password)
-      .then((user) => {
-        setProcesing(false);
-        setSuccessed(true);
-
-        history.push("/home");
-      })
-      .catch((err) => {
-        setError(err.message);
-        setProcesing(false);
-      });
+    setProcesing(false);
+    setSuccessed(true);
+    history.push("/home");
   };
 
   const registerHandler = (e) => {
     e.preventDefault();
     setProcesing(true);
-    auth
-      .createUserWithEmailAndPassword(email, password)
-      .then((user) => {
-        setProcesing(false);
-        setSuccessed(true);
-        history.push("/home");
-      })
-      .catch((err) => {
-        setError(err.message);
-        setProcesing(false);
-      });
+    setProcesing(false);
+    setSuccessed(true);
+    history.push("/home");
   };
 
   return (
@@ -77,20 +60,10 @@ export default function Login({ LoginUser }) {
           <img src={logo} alt="..." className={loginStyle.insta_logo} />
 
           <form className={loginStyle.login_form}>
-            <h6
-              style={{
-                fontFamily: "verana",
-                fontWeight: "thin",
-                color: "red",
-                margin: "10px 10px",
-              }}
-            >
-              {error}
-            </h6>
-
             <input
-              type="text"
+              type="email"
               placeholder="email..."
+              required
               className={loginStyle.login__inpt}
               value={email}
               onChange={(e) => {
@@ -99,6 +72,7 @@ export default function Login({ LoginUser }) {
             ></input>
             <input
               type="password"
+              required
               placeholder="password..."
               className={loginStyle.login__inpt}
               value={password}

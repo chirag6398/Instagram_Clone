@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Home from "./components/Home/Home";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -6,11 +6,11 @@ import Comment from "./components/NewCommentSection/Comment";
 import userImg from "./images/demoUserImg.jpg";
 import Story from "./components/StoryHeader/Userstories";
 import Login from "./components/Login";
-import { auth } from "./firebase/firebase";
+// import { auth } from "./firebase/firebase";
 
 function App() {
-  const [loginUser, setLoginUser] = useState(null);
-  const [post, setPost] = useState([
+  // const [loginUser, setLoginUser] = useState(null);
+  const [post] = useState([
     {
       posturl: userImg,
       postCaption: "#carying",
@@ -73,34 +73,30 @@ function App() {
     },
   ]);
 
-  var isTrue = false;
-  if (isTrue) {
-    setPost([]);
-  }
-  useEffect(() => {
-    auth.onAuthStateChanged((user) => {
-      if (user) {
-        setLoginUser(user.email);
-      } else {
-        setLoginUser(null);
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   auth.onAuthStateChanged((user) => {
+  //     if (user) {
+  //       setLoginUser(user.email);
+  //     } else {
+  //       setLoginUser(null);
+  //     }
+  //   });
+  // }, []);
   return (
     <BrowserRouter>
       <div className="app">
         <Switch>
           <Route exact path="/">
-            <Home post={post} LoginUser={loginUser} />
+            <Home post={post} />
           </Route>
           <Route exact path="/login">
-            <Login LoginUser={loginUser} />
+            <Login />
           </Route>
           <Route exact path="/story">
             <Story data={post} />
           </Route>
           <Route exact path="/:page">
-            <Home post={post} LoginUser={loginUser} />
+            <Home post={post} />
           </Route>
 
           <Route exact path="/commentsection/:page">

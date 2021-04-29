@@ -48,7 +48,7 @@
   text-align: center;
   height: 41px;
   opacity: 0.8;
-
+  min-width: 246px;
   border-radius: 3px;
   border-width: thin;
   border-color: cyan;
@@ -58,7 +58,7 @@
 }
 .login_btn {
   background-color: #6666ff;
-  /* opacity: 0.5; */
+  color: white;
   width: 245px;
   height: 31px;
   margin-top: 10px;

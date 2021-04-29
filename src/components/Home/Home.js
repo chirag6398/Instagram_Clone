@@ -15,7 +15,7 @@ export default function Home(props) {
   return (
     <>
       <div>
-        <Header user={props.LoginUser} />
+        <Header />
         <div className={homeStyle.home_extdiv} style={{ display: "flex" }}>
           <div className={homeStyle.container}>
             <div className={homeStyle.storySection}>
@@ -46,7 +46,7 @@ export default function Home(props) {
             })}
           </div>
           <div className={homeStyle.home_sugestionPortion}>
-            <Sugestion user={props.LoginUser} />
+            <Sugestion />
           </div>
         </div>
       </div>

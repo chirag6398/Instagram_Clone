@@ -20,11 +20,23 @@ export default function Post(props) {
   const [isScreenXsizeMobileView, setIsScreeMobileView] = useState(false);
 
   useEffect(() => {
-    if (window.innerWidth <= 600) {
-      setIsScreeMobileView(true);
-    } else {
-      setIsScreeMobileView(false);
-    }
+    window.addEventListener("resize", () => {
+      if (window.innerWidth <= 600) {
+        setIsScreeMobileView(true);
+      } else {
+        setIsScreeMobileView(false);
+      }
+    });
+
+    return () => {
+      window.removeEventListener("resize", () => {
+        if (window.innerWidth <= 600) {
+          setIsScreeMobileView(true);
+        } else {
+          setIsScreeMobileView(false);
+        }
+      });
+    };
   }, []);
 
   const doubleClickHandler = () => {

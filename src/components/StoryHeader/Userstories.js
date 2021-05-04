@@ -5,19 +5,7 @@ import storyStyle from "../../styles/story.module.css";
 import logo from "../../images/instaStorylogo.png";
 import multyplysymbol from "../../images/multiplyicon.png";
 import Avatar from "@material-ui/core/Avatar";
-// import YouTube from "react-youtube";
-
 export default function Userstories(props) {
-  // const opts = {
-  //   height: "350",
-  //   width: "400",
-  //   playerVars: {
-  //     autoplay: "1",
-  //     host: "https://www.youtube.com",
-  //     origin: "https://localhost:3000",
-  //   },
-  // };
-
   return (
     <div className={storyStyle.ext_div}>
       <NavLink to="/home">

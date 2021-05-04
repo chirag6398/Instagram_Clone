@@ -2,10 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 4vh;
+  margin-top: 20px;
   color: white;
-  left: 36vw;
 }
 .ext_div {
   display: flex;
@@ -54,22 +52,22 @@ input:focus {
 }
 .center_div {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  height: 98vh;
+  width: fit-content;
+  height: fit-content;
   background-color: rgb(46, 43, 38);
   border-radius: 5px;
   border: 1px solid rgb(65, 63, 63);
+  max-width: 471px;
 }
 .replyField {
-  position: absolute;
-  top: 77vh;
   border: 2px solid rgb(36, 32, 32);
   border-radius: 34px;
   height: 7vh;
   margin-top: 20px;
-  width: 25vw;
+  width: 100%;
   background-color: rgb(68, 66, 66);
   padding-left: 4vw;
 }

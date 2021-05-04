@@ -5,13 +5,8 @@ import { NavLink } from "react-router-dom";
 import Header from "../Header";
 import storyimg from "../../images/storyimg.jpg";
 import Sugestion from "./Sugetion";
-// import { TweenMax, Power3 } from "gsap";
 
 export default function Home(props) {
-  // var divRef = useRef(null);
-  // useEffect(() => {
-  //   TweenMax.from(divRef, 1, { x: -12000, duration: 2, ease: Power3.easeOut });ref={(el) => (divRef = el)}
-  // });
   return (
     <>
       <div>

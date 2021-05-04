@@ -46,10 +46,10 @@ export default function Chat(props) {
               >
                 {message}
               </p>
-              <div ref={divRef} />
             </div>
           );
         })}
+        <div ref={divRef} />
       </div>
       <div className={chatStyle.chat_footer}>
         <IconButton>
@@ -66,6 +66,7 @@ export default function Chat(props) {
             }}
             placeholder="enter yor message..."
           />
+
           <button type="submit" onClick={sendMessage}></button>
         </form>
         <IconButton>

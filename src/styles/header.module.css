@@ -1,5 +1,5 @@
 .ext_div {
-  position: fixed;
+  position: sticky;
   top: 0px;
   display: flex;
   align-items: center;

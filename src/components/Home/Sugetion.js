@@ -15,8 +15,13 @@ export default function Sugetion({ user }) {
           </p>
         </div>
       </div>
-      <b style={{ color: "gray" }}>suggestions for you</b>
-      <b style={{ marginLeft: "30px" }}>see all</b>
+      <div className={sugestionStyle.sugestion_userSection}>
+        <div className={sugestionStyle.user_follow_style}>
+          <b style={{ color: "gray" }}>suggestions for you</b>
+          <b style={{ marginLeft: "30px" }}>see all</b>
+        </div>
+      </div>
+
       <div className={sugestionStyle.sugestion_userSection}>
         <Avatar style={{ cursor: "pointer" }} alt="..." src={duserImg} />
         <div className={sugestionStyle.user_follow_style}>

@@ -2,7 +2,6 @@
   overflow-y: hidden;
 }
 .storySection {
-  margin-top: 14vh;
   margin-bottom: 6vh;
   max-width: 495px;
   height: 14vh;
@@ -17,7 +16,8 @@
 }
 .home_sugestionPortion {
   display: flex;
-  margin: 94px 9px;
+  margin: 16px 9px;
+  flex: 1;
 }
 .storySection::-webkit-scrollbar {
   display: none;
@@ -36,7 +36,6 @@
 
 @media all and (max-width: 595px) {
   .storySection {
-    margin-top: 10vh;
     margin-bottom: 0px;
     max-width: 100%;
     height: 12vh;

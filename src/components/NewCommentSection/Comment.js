@@ -31,18 +31,20 @@ export default function Comment(props) {
     }
   }, [userName.userName]);
 
-  if (screenSize <= 369) {
+  if (screenSize <= 469) {
     return (
       <>
         <div ref={(el) => (divRef = el)}>
           <Header />
-          <div style={{ marginTop: "10vh" }}>
+          <div>
             {userName.userName ? (
               <div style={{ height: "90vh" }}>
                 <Chat userName={userName} />
               </div>
             ) : (
-              <Sidebar data={props.data} />
+              <div>
+                <Sidebar data={props.data} />
+              </div>
             )}
           </div>
         </div>

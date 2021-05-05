@@ -19,6 +19,6 @@
   cursor: pointer;
 }
 .sugestion_container {
-  margin-top: 14px;
+  min-width: 304px;
   position: fixed;
 }

@@ -37,6 +37,7 @@
 
   -webkit-animation: showHeart 1s linear;
 }
+
 .post__img {
   display: flex;
   align-items: center;
@@ -102,7 +103,7 @@
 .belowPost {
   padding-left: 7px;
   font-family: serif;
-
+  padding-bottom: 12px;
   width: 100%;
   height: auto;
 }

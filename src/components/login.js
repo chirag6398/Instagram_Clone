@@ -10,11 +10,15 @@ import { useHistory } from "react-router-dom";
 
 export default function Login() {
   const history = useHistory();
-  const [email, setEmail] = useState("");
+  const [userLoginData, setUserLoginData] = useState({
+    email: "",
+    password: "",
+  });
+  // const [email, setEmail] = useState("");
   // const [error, setError] = useState("");
-  const [password, setPassword] = useState("");
+  // const [password, setPassword] = useState("");
   const [disabled, setDisabled] = useState(true);
-  const [processing, setProcesing] = useState();
+  const [processing, setProcesing] = useState(false);
   const [successed, setSuccessed] = useState(false);
   const [randomNo, setRandomNo] = useState(0);
   const [dynUrl] = useState([
@@ -24,6 +28,12 @@ export default function Login() {
     "https://www.instagram.com/static/images/homepage/screenshot5.jpg/0a2d3016f375.jpg",
     "https://www.instagram.com/static/images/homepage/screenshot1.jpg/d6bf0c928b5a.jpg",
   ]);
+  const inputHandler = (e) => {
+    setUserLoginData({ ...userLoginData, [e.target.name]: e.target.value });
+    if (userLoginData.email && userLoginData.password.length > 4) {
+      setDisabled(false);
+    }
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -62,29 +72,26 @@ export default function Login() {
           <form className={loginStyle.login_form}>
             <input
               type="email"
+              name="email"
               placeholder="email..."
-              required
+              required={true}
               className={loginStyle.login__inpt}
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
+              value={userLoginData.email}
+              onChange={inputHandler}
             ></input>
             <input
               type="password"
-              required
+              required={true}
+              name="password"
               placeholder="password..."
               className={loginStyle.login__inpt}
-              value={password}
-              onChange={(e) => {
-                setPassword(e.target.value);
-                if (email && password) setDisabled(false);
-              }}
+              value={userLoginData.password}
+              onChange={inputHandler}
             ></input>
             <button
               type="submit"
               onClick={signInHandler}
-              disabled={processing || disabled || successed}
+              disabled={disabled}
               className={loginStyle.login_btn}
             >
               {processing ? "processing" : successed ? "successed" : "Login"}

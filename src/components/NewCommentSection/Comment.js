@@ -29,7 +29,7 @@ export default function Comment(props) {
         ease: Power3.easeIn,
       });
     }
-  });
+  }, [userName.userName]);
 
   if (screenSize <= 369) {
     return (

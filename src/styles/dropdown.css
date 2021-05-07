@@ -37,17 +37,17 @@ span {
 }
 .dropdown__uparrow {
   position: absolute;
-  top: -37px;
-  right: -3px;
+  top: -26px;
+  right: 14px;
 }
 .dropdown__uparrow > .MuiSvgIcon-root {
-  font-size: 79px;
+  font-size: 51px;
   color: #f7f5f5;
 }
 @media all and (max-width: 369px) {
   .dropdown__uparrow {
     position: absolute;
-    top: -37px;
-    right: -24px;
+    top: -28px;
+    right: -13px;
   }
 }

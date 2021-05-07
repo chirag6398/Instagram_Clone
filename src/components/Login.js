@@ -17,7 +17,7 @@ export default function Login() {
   // const [email, setEmail] = useState("");
   // const [error, setError] = useState("");
   // const [password, setPassword] = useState("");
-  const [disabled, setDisabled] = useState(true);
+  const [disabled, setDisabled] = useState(false);
   const [processing, setProcesing] = useState(false);
   const [successed, setSuccessed] = useState(false);
   const [randomNo, setRandomNo] = useState(0);
@@ -28,11 +28,10 @@ export default function Login() {
     "https://www.instagram.com/static/images/homepage/screenshot5.jpg/0a2d3016f375.jpg",
     "https://www.instagram.com/static/images/homepage/screenshot1.jpg/d6bf0c928b5a.jpg",
   ]);
+
   const inputHandler = (e) => {
     setUserLoginData({ ...userLoginData, [e.target.name]: e.target.value });
-    if (userLoginData.email && userLoginData.password.length > 4) {
-      setDisabled(false);
-    }
+    console.log(userLoginData);
   };
 
   useEffect(() => {
@@ -45,20 +44,51 @@ export default function Login() {
     };
   }, []);
 
-  const signInHandler = (e) => {
-    e.preventDefault();
-    setProcesing(true);
-    setProcesing(false);
-    setSuccessed(true);
-    history.push("/home");
+  const signInHandler = async (e) => {
+    try {
+      e.preventDefault();
+      setProcesing(true);
+      const res = await fetch("/api/signin", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(userLoginData),
+      });
+      setProcesing(false);
+      const data = await res.json();
+      if (data.status === 201) {
+        console.log(data.message);
+        setSuccessed(true);
+        history.push("/home");
+      } else {
+        console.log(data.error);
+      }
+    } catch (err) {
+      console.log(err);
+    }
   };
 
-  const registerHandler = (e) => {
+  const registerHandler = async (e) => {
     e.preventDefault();
     setProcesing(true);
+
+    const res = await fetch("/api/register", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(userLoginData),
+    });
     setProcesing(false);
-    setSuccessed(true);
-    history.push("/home");
+    const data = await res.json();
+    console.log(data);
+    if (!data.status === 501 || !data.status === 422) {
+      setSuccessed(true);
+      history.push("/home");
+    } else {
+      console.log(data.error);
+    }
   };
 
   return (

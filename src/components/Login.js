@@ -5,7 +5,6 @@ import Adnld from "../images/Appleplaystore.png";
 import Gps from "../images/googleplaystore.png";
 import sideImg from "../images/sidePhoneimg.png";
 import fIcon from "../images/facebookIcon.png";
-// import { auth } from "../firebase/firebase";
 import { useHistory } from "react-router-dom";
 
 export default function Login() {
@@ -14,10 +13,7 @@ export default function Login() {
     email: "",
     password: "",
   });
-  // const [email, setEmail] = useState("");
-  // const [error, setError] = useState("");
-  // const [password, setPassword] = useState("");
-  const [disabled, setDisabled] = useState(false);
+  const [disabled] = useState(false);
   const [processing, setProcesing] = useState(false);
   const [successed, setSuccessed] = useState(false);
   const [randomNo, setRandomNo] = useState(0);

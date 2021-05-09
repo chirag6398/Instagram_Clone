@@ -44,22 +44,9 @@ export default function Login() {
     try {
       e.preventDefault();
       setProcesing(true);
-      const res = await fetch("/api/signin", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(userLoginData),
-      });
-      setProcesing(false);
-      const data = await res.json();
-      if (data.status === 201) {
-        console.log(data.message);
-        setSuccessed(true);
-        history.push("/home");
-      } else {
-        console.log(data.error);
-      }
+
+      setSuccessed(true);
+      history.push("/home");
     } catch (err) {
       console.log(err);
     }
@@ -69,22 +56,10 @@ export default function Login() {
     e.preventDefault();
     setProcesing(true);
 
-    const res = await fetch("/api/register", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(userLoginData),
-    });
     setProcesing(false);
-    const data = await res.json();
-    console.log(data);
-    if (!data.status === 501 || !data.status === 422) {
-      setSuccessed(true);
-      history.push("/home");
-    } else {
-      console.log(data.error);
-    }
+
+    setSuccessed(true);
+    history.push("/home");
   };
 
   return (
@@ -202,5 +177,3 @@ export default function Login() {
     </div>
   );
 }
-
-// pidfp

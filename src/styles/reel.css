@@ -1,0 +1,23 @@
+.reel__container {
+  max-height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* overflow: scroll; */
+  color: white;
+  border-radius: 5px;
+}
+.reel__maindiv {
+  max-height: 80vh;
+  overflow: scroll;
+}
+.reel__maindiv::-webkit-scrollbar {
+  display: none;
+}
+
+.reel__maindiv > img {
+  max-height: 80vh;
+  object-fit: contain;
+}

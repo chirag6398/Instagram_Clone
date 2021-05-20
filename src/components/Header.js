@@ -15,7 +15,7 @@ import SendRoundedIcon from "@material-ui/icons/SendRounded";
 import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
 import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
 import Dropdown from "./Dropdown";
-import { TweenMax, Power3 } from "gsap";
+import { gsap } from "gsap";
 export default function Header() {
   const active_page = useParams();
   let dropRef = useRef(null);
@@ -26,10 +26,10 @@ export default function Header() {
   };
   useEffect(() => {
     if (showDropdown) {
-      TweenMax.from(dropRef, {
+      gsap.from(dropRef, {
         duration: 0.5,
         opacity: 0,
-        ease: Power3.easeIn,
+        ease: "none",
       });
     }
   });

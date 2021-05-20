@@ -6,6 +6,7 @@ import Comment from "./components/NewCommentSection/Comment";
 import userImg from "./images/demoUserImg.jpg";
 import Story from "./components/StoryHeader/Userstories";
 import Login from "./components/Login";
+import Reels from "./components/reels/Reel.js";
 // import { auth } from "./firebase/firebase";
 
 function App() {
@@ -86,6 +87,11 @@ function App() {
     <BrowserRouter>
       <div className="app">
         <Switch>
+          <Route to="/">
+            <div className="app__reelContainer">
+              <Reels />
+            </div>
+          </Route>
           <Route exact path="/">
             <Home post={post} />
           </Route>

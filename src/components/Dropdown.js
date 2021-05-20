@@ -8,8 +8,29 @@ import SwapHorizOutlinedIcon from "@material-ui/icons/SwapHorizOutlined";
 import { useHistory } from "react-router-dom";
 export default function Dropdown() {
   const history = useHistory();
-  const logoutHandler = () => {
-    history.push("/login");
+  const logoutHandler = async () => {
+    try {
+      var isLogout = window.confirm("You will logout from your device");
+      if (isLogout) {
+        const res = await fetch("/api/logout", {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        });
+        console.log(res);
+        const data = await res.json();
+        if (data.status === 401) {
+          console.log(data);
+        } else {
+          history.push("/login");
+        }
+      }
+    } catch (err) {
+      console.log(err);
+    }
   };
   const LoginHandler = () => {
     history.push("/login");
